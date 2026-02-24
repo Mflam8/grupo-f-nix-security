@@ -47,8 +47,22 @@
  *
  * The mainPage value must match a key in the PAGES object exactly.
  */
+import Home from './pages/Home';
+import Servicios from './pages/Servicios';
+import Nosotros from './pages/Nosotros';
+import Contacto from './pages/Contacto';
+import __Layout from './Layout.jsx';
 
-export const pagesConfig = {
-	Pages: {}
+
+export const PAGES = {
+    "Home": Home,
+    "Servicios": Servicios,
+    "Nosotros": Nosotros,
+    "Contacto": Contacto,
 }
 
+export const pagesConfig = {
+    mainPage: "Home",
+    Pages: PAGES,
+    Layout: __Layout,
+};
