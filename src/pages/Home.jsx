@@ -219,24 +219,33 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── PHOTO STRIP ── */}
+      {/* ── VISUAL STRIP ── */}
       <section style={{ overflow: "hidden", background: "#000", padding: "0" }}>
-        <div style={{ display: "flex", gap: "4px" }}>
-          {[PHOTOS.convoy1, PHOTOS.agent1, PHOTOS.nightOp, PHOTOS.logistic].map((src, i) => (
-            <div key={i} style={{ flex: 1, height: "220px", overflow: "hidden", position: "relative" }}>
-              <img
-                src={src}
-                alt="Grupo Fénix en operación"
-                style={{ width: "100%", height: "100%", objectFit: "cover", filter: "brightness(0.6)", transition: "transform 0.5s ease" }}
-                onMouseEnter={e => e.currentTarget.style.transform = "scale(1.06)"}
-                onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
-              />
-              <div style={{
-                position: "absolute", inset: 0,
-                background: "linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 60%)",
-              }} />
-            </div>
-          ))}
+        <div style={{ display: "flex", gap: "3px" }}>
+          {[
+            { icon: Shield, label: "Seguridad Armada", color: "#1a1000" },
+            { icon: Camera, label: "Vigilancia Electrónica", color: "#0a0a14" },
+            { icon: Lock, label: "Ciberseguridad", color: "#0a1200" },
+            { icon: Search, label: "Investigaciones", color: "#14000a" },
+          ].map((item, i) => {
+            const Icon = item.icon;
+            return (
+              <div key={i} style={{
+                flex: 1, height: "180px", overflow: "hidden", position: "relative",
+                background: `linear-gradient(145deg, ${item.color}, #000)`,
+                borderTop: `2px solid rgba(245,197,24,0.15)`,
+                display: "flex", flexDirection: "column",
+                alignItems: "center", justifyContent: "center", gap: "10px",
+                transition: "all 0.3s ease", cursor: "default",
+              }}
+              onMouseEnter={e => { e.currentTarget.style.borderTopColor = GOLD; e.currentTarget.style.background = `linear-gradient(145deg, ${item.color.replace("0a", "1a")}, #050505)`; }}
+              onMouseLeave={e => { e.currentTarget.style.borderTopColor = "rgba(245,197,24,0.15)"; e.currentTarget.style.background = `linear-gradient(145deg, ${item.color}, #000)`; }}
+              >
+                <Icon style={{ color: GOLD, width: "32px", height: "32px", opacity: 0.8 }} />
+                <span style={{ color: "#777", fontSize: "0.72rem", letterSpacing: "1.5px", textAlign: "center", padding: "0 8px" }}>{item.label.toUpperCase()}</span>
+              </div>
+            );
+          })}
         </div>
       </section>
 
