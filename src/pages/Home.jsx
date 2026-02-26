@@ -346,7 +346,7 @@ export default function Home() {
           backgroundSize: "20px 20px",
         }} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{ position: "relative" }}>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="stats-grid grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {stats.map((s, i) => (
               <div key={i} className="stat-card">
                 <div style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: "900", color: "#000", lineHeight: "1" }}>
