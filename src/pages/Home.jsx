@@ -276,17 +276,34 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {differentiators.map((d, i) => {
-                const Icon = d.icon;
-                return (
-                  <div key={i} className="gold-card" style={{ padding: "1.75rem" }}>
-                    <Icon style={{ color: GOLD, width: "28px", height: "28px", marginBottom: "0.85rem" }} />
-                    <div style={{ color: "white", fontWeight: "700", fontSize: "0.95rem", marginBottom: "0.5rem" }}>{d.title}</div>
-                    <div style={{ color: "#666", fontSize: "0.8rem", lineHeight: "1.65" }}>{d.desc}</div>
-                  </div>
-                );
-              })}
+            {/* Image + cards grid */}
+            <div className="reveal">
+              {/* Real team photo */}
+              <div style={{
+                borderRadius: "14px",
+                overflow: "hidden",
+                border: "1px solid rgba(245,197,24,0.2)",
+                marginBottom: "1rem",
+                height: "280px",
+              }}>
+                <img
+                  src={PHOTOS.team}
+                  alt="Equipo Grupo Fénix"
+                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 20%" }}
+                />
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                {differentiators.map((d, i) => {
+                  const Icon = d.icon;
+                  return (
+                    <div key={i} className="gold-card" style={{ padding: "1.5rem" }}>
+                      <Icon style={{ color: GOLD, width: "24px", height: "24px", marginBottom: "0.75rem" }} />
+                      <div style={{ color: "white", fontWeight: "700", fontSize: "0.9rem", marginBottom: "0.4rem" }}>{d.title}</div>
+                      <div style={{ color: "#666", fontSize: "0.78rem", lineHeight: "1.6" }}>{d.desc}</div>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
