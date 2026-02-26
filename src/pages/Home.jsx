@@ -65,6 +65,7 @@ const memberships = [
 ];
 
 export default function Home() {
+  useScrollReveal();
   useEffect(() => {
     document.title = "Grupo Fénix – Seguridad Integral | El Salvador";
   }, []);
@@ -82,17 +83,20 @@ export default function Home() {
           paddingTop: "80px",
         }}
       >
-        {/* Decorative glows */}
+        {/* Full-bleed hero image */}
         <div style={{
-          position: "absolute", top: "15%", right: "-8%",
-          width: "650px", height: "650px",
-          background: "radial-gradient(circle, rgba(245,197,24,0.07) 0%, transparent 65%)",
-          pointerEvents: "none",
+          position: "absolute", inset: 0,
+          backgroundImage: `url(${PHOTOS.hero1})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center top",
+          filter: "brightness(0.22)",
         }} />
+
+        {/* Gold glow */}
         <div style={{
-          position: "absolute", bottom: "5%", left: "-5%",
-          width: "400px", height: "400px",
-          background: "radial-gradient(circle, rgba(245,197,24,0.04) 0%, transparent 65%)",
+          position: "absolute", top: "10%", right: "-5%",
+          width: "600px", height: "600px",
+          background: "radial-gradient(circle, rgba(245,197,24,0.12) 0%, transparent 65%)",
           pointerEvents: "none",
         }} />
 
@@ -104,38 +108,57 @@ export default function Home() {
           pointerEvents: "none",
         }} />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20">
-          <div className="max-w-3xl">
-            <div className="section-tag">Seguridad Integral Estratégica · El Salvador</div>
-            <h1
-              style={{
-                fontSize: "clamp(2.6rem, 6vw, 5.2rem)",
-                fontWeight: "900",
-                lineHeight: "1.1",
-                marginBottom: "1.5rem",
-                color: "white",
-              }}
-            >
-              Protección que<br />
-              <span style={{ color: GOLD }}>inspira confianza.</span>
-            </h1>
-            <p style={{ fontSize: "1.1rem", color: "#999", lineHeight: "1.85", maxWidth: "580px", marginBottom: "2.5rem" }}>
-              En Grupo Fénix somos un <strong style={{ color: "white" }}>equipo de profesionales</strong> dedicados a brindar soluciones de seguridad integral innovadoras, tecnológicas y personalizadas para empresas, instituciones y familias.
-            </p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20" style={{ position: "relative", zIndex: 1 }}>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="section-tag">Seguridad Integral Estratégica · El Salvador</div>
+              <h1
+                style={{
+                  fontSize: "clamp(2.6rem, 6vw, 5.2rem)",
+                  fontWeight: "900",
+                  lineHeight: "1.1",
+                  marginBottom: "1.5rem",
+                  color: "white",
+                }}
+              >
+                Protección que<br />
+                <span style={{ color: GOLD }}>inspira confianza.</span>
+              </h1>
+              <p style={{ fontSize: "1.05rem", color: "#bbb", lineHeight: "1.85", maxWidth: "560px", marginBottom: "2.5rem" }}>
+                En Grupo Fénix somos un <strong style={{ color: "white" }}>equipo de profesionales</strong> dedicados a brindar soluciones de seguridad integral innovadoras, tecnológicas y personalizadas para empresas, instituciones y familias.
+              </p>
 
-            <div className="flex flex-wrap gap-4">
-              <Link to={createPageUrl("Servicios")} className="btn-primary" style={{ fontSize: "1rem", padding: "14px 32px" }}>
-                Ver nuestros servicios
-              </Link>
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-secondary" style={{ fontSize: "1rem", padding: "14px 32px" }}>
-                💬 Solicitar cotización
-              </a>
+              <div className="flex flex-wrap gap-4">
+                <Link to={createPageUrl("Servicios")} className="btn-primary" style={{ fontSize: "1rem", padding: "14px 32px" }}>
+                  Ver nuestros servicios
+                </Link>
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-secondary" style={{ fontSize: "1rem", padding: "14px 32px" }}>
+                  💬 Solicitar cotización
+                </a>
+              </div>
+
+              <div className="flex flex-wrap gap-6 mt-10" style={{ color: "#444", fontSize: "0.8rem" }}>
+                {["Autorización PNC #406", "Miembro BASC", "Miembro UNAPS", "Asegurados MAPFRE"].map((b, i) => (
+                  <span key={i} style={{ color: "#777" }}>✓ {b}</span>
+                ))}
+              </div>
             </div>
 
-            <div className="flex flex-wrap gap-6 mt-12" style={{ color: "#444", fontSize: "0.8rem" }}>
-              {["Autorización PNC #406", "Miembro BASC", "Miembro UNAPS", "Asegurados MAPFRE"].map((b, i) => (
-                <span key={i} style={{ color: "#666" }}>✓ {b}</span>
-              ))}
+            {/* Hero image card */}
+            <div className="hidden lg:block">
+              <div style={{
+                borderRadius: "16px",
+                overflow: "hidden",
+                border: "1px solid rgba(245,197,24,0.2)",
+                boxShadow: "0 0 60px rgba(245,197,24,0.08)",
+                height: "520px",
+              }}>
+                <img
+                  src={PHOTOS.flyer}
+                  alt="Grupo Fénix – Seguridad que inspira confianza"
+                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }}
+                />
+              </div>
             </div>
           </div>
         </div>
