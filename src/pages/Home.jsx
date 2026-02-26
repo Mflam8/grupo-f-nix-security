@@ -221,7 +221,7 @@ export default function Home() {
                 En <strong style={{ color: "white" }}>Grupo Fénix</strong> somos especialistas en seguridad integral estratégica — protegiendo empresas, instituciones y familias con tecnología de punta y personal de élite.
               </p>
 
-              <div className="flex flex-wrap gap-4" style={{ animation: "fadeUp 0.9s ease 0.6s both" }}>
+              <div className="hero-buttons flex flex-wrap gap-4" style={{ animation: "fadeUp 0.9s ease 0.6s both" }}>
                 <Link to={createPageUrl("Servicios")} className="cta-btn" style={{
                   background: GOLD, color: "#000", fontWeight: "800",
                   padding: "16px 36px", borderRadius: "8px", fontSize: "1rem",
