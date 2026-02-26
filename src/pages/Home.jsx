@@ -178,12 +178,33 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── PHOTO STRIP ── */}
+      <section style={{ overflow: "hidden", background: "#000", padding: "0" }}>
+        <div style={{ display: "flex", gap: "4px" }}>
+          {[PHOTOS.convoy1, PHOTOS.agent1, PHOTOS.nightOp, PHOTOS.logistic].map((src, i) => (
+            <div key={i} style={{ flex: 1, height: "220px", overflow: "hidden", position: "relative" }}>
+              <img
+                src={src}
+                alt="Grupo Fénix en operación"
+                style={{ width: "100%", height: "100%", objectFit: "cover", filter: "brightness(0.6)", transition: "transform 0.5s ease" }}
+                onMouseEnter={e => e.currentTarget.style.transform = "scale(1.06)"}
+                onMouseLeave={e => e.currentTarget.style.transform = "scale(1)"}
+              />
+              <div style={{
+                position: "absolute", inset: 0,
+                background: "linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 60%)",
+              }} />
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* ── SERVICES OVERVIEW ── */}
       <section style={{ padding: "6rem 0", background: "#000" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <div className="section-tag">Nuestros Servicios</div>
-            <h2 style={{ fontSize: "2.6rem", fontWeight: "900", color: "white", marginBottom: "1rem" }}>
+            <h2 style={{ fontSize: "clamp(1.8rem, 4vw, 2.6rem)", fontWeight: "900", color: "white", marginBottom: "1rem" }}>
               Servicios de <span style={{ color: GOLD }}>Seguridad Integral</span>
             </h2>
             <p style={{ color: "#666", maxWidth: "540px", margin: "0 auto", lineHeight: "1.75", fontSize: "0.95rem" }}>
@@ -195,7 +216,7 @@ export default function Home() {
             {services.map((s, i) => {
               const Icon = s.icon;
               return (
-                <div key={i} className="gold-card" style={{ padding: "2rem" }}>
+                <div key={i} className="gold-card reveal" style={{ padding: "2rem" }}>
                   <div style={{
                     width: "50px", height: "50px",
                     background: "rgba(245,197,24,0.1)",
