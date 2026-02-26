@@ -82,19 +82,10 @@ export default function Home() {
           filter: "brightness(0.18)",
         }} />
 
-        {/* Gold glow */}
-        <div style={{
-          position: "absolute", top: "10%", right: "-5%",
-          width: "600px", height: "600px",
-          background: "radial-gradient(circle, rgba(245,197,24,0.12) 0%, transparent 65%)",
-          pointerEvents: "none",
-        }} />
-
-        {/* Grid pattern overlay */}
+        {/* Gold glow overlay */}
         <div style={{
           position: "absolute", inset: 0,
-          backgroundImage: "linear-gradient(rgba(245,197,24,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(245,197,24,0.03) 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
+          background: "linear-gradient(to right, rgba(0,0,0,0.85) 40%, rgba(0,0,0,0.3) 100%)",
           pointerEvents: "none",
         }} />
 
