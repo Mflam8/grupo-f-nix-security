@@ -73,13 +73,14 @@ export default function Home() {
           paddingTop: "80px",
         }}
       >
-        {/* Full-bleed hero image */}
+        {/* Abstract hero background */}
         <div style={{
           position: "absolute", inset: 0,
-          backgroundImage: `url(${PHOTOS.hero1})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center top",
-          filter: "brightness(0.22)",
+          background: "linear-gradient(135deg, #000 0%, #0d0800 50%, #000 100%)",
+        }} />
+        <div style={{
+          position: "absolute", inset: 0,
+          backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(245,197,24,0.04) 60px), repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(245,197,24,0.04) 60px)",
         }} />
 
         {/* Gold glow */}
