@@ -584,7 +584,7 @@ export default function Home() {
           <div style={{ color: "#333", fontSize: "0.72rem", letterSpacing: "3px", textAlign: "center", marginBottom: "2.5rem" }}>
             MEMBRESÍAS · CERTIFICACIONES · SEGUROS
           </div>
-          <div className="flex flex-wrap justify-center items-center gap-4">
+          <div className="memberships-row flex flex-wrap justify-center items-center gap-4">
             {[
               { name: "BASC", sub: "Business Alliance" },
               { name: "UNAPS", sub: "Agencias Privadas" },
