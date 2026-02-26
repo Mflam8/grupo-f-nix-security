@@ -73,18 +73,34 @@ export default function Nosotros() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { value: "406", label: "Licencia PNC" },
-                { value: "24/7", label: "Centro de Operaciones" },
-                { value: "3+", label: "Membresías Nacionales" },
-                { value: "100%", label: "Personal Certificado" },
-              ].map((s, i) => (
-                <div key={i} className="gold-card text-center" style={{ padding: "2.25rem 1.5rem" }}>
-                  <div style={{ fontSize: "2.8rem", fontWeight: "900", color: GOLD, lineHeight: "1" }}>{s.value}</div>
-                  <div style={{ color: "#666", fontSize: "0.82rem", marginTop: "0.5rem" }}>{s.label}</div>
+            <div style={{ position: "relative" }}>
+              <div style={{
+                borderRadius: "16px", overflow: "hidden",
+                border: "1px solid rgba(245,197,24,0.2)",
+                height: "380px", position: "relative",
+              }}>
+                <img
+                  src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=900&q=80"
+                  alt="Equipo Grupo Fénix en operación"
+                  style={{ width: "100%", height: "100%", objectFit: "cover", filter: "brightness(0.55)" }}
+                />
+                <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%)" }} />
+                <div style={{ position: "absolute", bottom: "24px", left: "0", right: "0" }}>
+                  <div className="grid grid-cols-4 gap-0" style={{ textAlign: "center", padding: "0 20px" }}>
+                    {[
+                      { value: "406", label: "Lic. PNC" },
+                      { value: "24/7", label: "COS Activo" },
+                      { value: "3+", label: "Membresías" },
+                      { value: "100%", label: "Certificados" },
+                    ].map((s, i) => (
+                      <div key={i}>
+                        <div style={{ color: GOLD, fontWeight: "900", fontSize: "1.5rem", lineHeight: "1" }}>{s.value}</div>
+                        <div style={{ color: "#888", fontSize: "0.65rem", marginTop: "3px" }}>{s.label}</div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </div>
