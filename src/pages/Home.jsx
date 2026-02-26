@@ -246,7 +246,8 @@ export default function Home() {
       <section style={{ padding: "6rem 0", background: "#050505" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
+            {/* Real photo left on mobile is below text */}
+            <div className="reveal">
               <div className="section-tag">¿Por qué elegirnos?</div>
               <h2 style={{ fontSize: "2.5rem", fontWeight: "900", color: "white", marginBottom: "1.5rem", lineHeight: "1.2" }}>
                 Así somos en <span style={{ color: GOLD }}>Grupo Fénix</span>
