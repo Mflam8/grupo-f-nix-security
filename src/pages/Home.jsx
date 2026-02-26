@@ -282,38 +282,22 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Visual panel — stat showcase */}
+            {/* Team photo + differentiator cards */}
             <div className="reveal">
-              {/* Large visual placeholder with gold accent */}
               <div style={{
-                borderRadius: "14px",
+                borderRadius: "14px", overflow: "hidden",
                 border: "1px solid rgba(245,197,24,0.2)",
-                marginBottom: "1rem",
-                height: "280px",
-                background: "linear-gradient(135deg, #0d0900 0%, #000 100%)",
-                display: "flex", alignItems: "center", justifyContent: "center",
-                position: "relative", overflow: "hidden",
+                marginBottom: "1rem", height: "280px", position: "relative",
               }}>
-                {/* Background grid */}
-                <div style={{
-                  position: "absolute", inset: 0,
-                  backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 29px, rgba(245,197,24,0.04) 30px), repeating-linear-gradient(90deg, transparent, transparent 29px, rgba(245,197,24,0.04) 30px)",
-                }} />
-                {/* Central content */}
-                <div style={{ textAlign: "center", zIndex: 1 }}>
-                  <Users style={{ color: GOLD, width: "48px", height: "48px", margin: "0 auto 12px", opacity: 0.7 }} />
-                  <div style={{ color: "white", fontWeight: "800", fontSize: "1.1rem" }}>Equipo de Élite</div>
-                  <div style={{ color: "#555", fontSize: "0.8rem", marginTop: "4px" }}>Personal Certificado ANSP · VSA · Psicológico</div>
-                  <div style={{
-                    marginTop: "16px", display: "flex", gap: "20px", justifyContent: "center",
-                  }}>
-                    {[{ v: "100%", l: "Certificados" }, { v: "24/7", l: "Disponibles" }, { v: "PNC", l: "#406" }].map((s, i) => (
-                      <div key={i} style={{ textAlign: "center" }}>
-                        <div style={{ color: GOLD, fontWeight: "900", fontSize: "1.2rem" }}>{s.v}</div>
-                        <div style={{ color: "#666", fontSize: "0.65rem" }}>{s.l}</div>
-                      </div>
-                    ))}
-                  </div>
+                <img
+                  src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=900&q=80"
+                  alt="Equipo profesional de seguridad"
+                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 30%", filter: "brightness(0.6)" }}
+                />
+                <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 55%)" }} />
+                <div style={{ position: "absolute", bottom: "20px", left: "24px" }}>
+                  <div style={{ color: GOLD, fontWeight: "800", fontSize: "1rem" }}>Nuestro Equipo</div>
+                  <div style={{ color: "#aaa", fontSize: "0.78rem" }}>Personal certificado ANSP · VSA · Psicológico</div>
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-4">
