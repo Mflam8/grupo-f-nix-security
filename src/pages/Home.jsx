@@ -117,6 +117,27 @@ export default function Home() {
         .reveal:nth-child(4) { transition-delay: 0.3s; }
         .reveal:nth-child(5) { transition-delay: 0.4s; }
         .reveal:nth-child(6) { transition-delay: 0.5s; }
+        /* ── Mobile optimizations ── */
+        @media (max-width: 768px) {
+          .hero-title { font-size: 3rem !important; }
+          .hero-buttons { flex-direction: column !important; }
+          .hero-buttons a, .hero-buttons .cta-btn { width: 100%; text-align: center; justify-content: center; }
+          .photo-strip-item { height: 160px !important; }
+          .photo-strip-item .strip-label { font-size: 0.6rem !important; }
+          .services-grid { grid-template-columns: 1fr !important; }
+          .stats-grid { grid-template-columns: 1fr 1fr !important; gap: 1.5rem !important; }
+          .memberships-row { gap: 0.5rem !important; }
+          .membership-pill { padding: 8px 14px !important; }
+          .membership-pill .pill-name { font-size: 0.78rem !important; }
+          .cta-section-buttons { flex-direction: column !important; align-items: center !important; }
+          .cta-section-buttons a { width: 100%; max-width: 340px; justify-content: center; }
+          .diff-cards-grid { grid-template-columns: 1fr 1fr !important; gap: 0.75rem !important; }
+          .why-checklist > div { padding: 10px 12px !important; }
+        }
+        @media (max-width: 480px) {
+          .photo-strip-item { height: 130px !important; }
+          .hero-tag { font-size: 0.6rem !important; letter-spacing: 1.5px !important; }
+        }
       `}</style>
 
       {/* ══════════════════════════════════════════
