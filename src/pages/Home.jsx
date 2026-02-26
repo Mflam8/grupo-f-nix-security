@@ -522,7 +522,7 @@ export default function Home() {
                 Nos apasiona brindar servicios de seguridad de alta calidad, basados en la confianza, integridad y excelencia, para garantizar la tranquilidad de nuestros clientes corporativos y particulares.
               </p>
 
-              <div className="flex flex-col gap-3 mb-8">
+              <div className="why-checklist flex flex-col gap-3 mb-8">
                 {[
                   "Personal certificado ANSP con pruebas VSA y evaluación psicológica",
                   "Centro de Operaciones y Servicios (COS) activo 24 horas",
