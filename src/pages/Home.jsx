@@ -73,14 +73,13 @@ export default function Home() {
           paddingTop: "80px",
         }}
       >
-        {/* Abstract hero background */}
+        {/* Hero background — tactical security photo */}
         <div style={{
           position: "absolute", inset: 0,
-          background: "linear-gradient(135deg, #000 0%, #0d0800 50%, #000 100%)",
-        }} />
-        <div style={{
-          position: "absolute", inset: 0,
-          backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(245,197,24,0.04) 60px), repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(245,197,24,0.04) 60px)",
+          backgroundImage: "url(https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=1800&q=80)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          filter: "brightness(0.18)",
         }} />
 
         {/* Gold glow */}
