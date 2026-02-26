@@ -3,11 +3,6 @@ import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { Target, Eye, Shield, Award, Users, MapPin, CheckCircle, Zap } from "lucide-react";
 
-const PHOTOS = {
-  team: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/8e41d4cdc_WhatsAppImage2026-02-25at55135PM2.jpg",
-  flyer: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/b57dc13c4_WhatsAppImage2026-02-25at55136PM1.jpg",
-  agent: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/e22d9e636_WhatsAppImage2026-02-25at55137PM2.jpg",
-};
 
 const GOLD = "#F5C518";
 const WHATSAPP_URL =
