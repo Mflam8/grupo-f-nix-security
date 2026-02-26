@@ -120,3 +120,19 @@ body { background: #000; color: white; margin: 0; font-family: -apple-system, Bl
   transform: scale(1.1);
   box-shadow: 0 6px 32px rgba(37, 211, 102, 0.7) !important;
 }
+
+/* ── Scroll Reveal Animations ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Photo strip hover */
+.photo-strip-item:hover img {
+  transform: scale(1.06);
+}
