@@ -118,7 +118,13 @@ export default function Servicios() {
   return (
     <div style={{ background: "#000", color: "white" }}>
       {/* ── PAGE HEADER ── */}
-      <div className="page-header">
+      <div className="page-header" style={{ position: "relative", overflow: "hidden" }}>
+        <div style={{
+          position: "absolute", inset: 0,
+          backgroundImage: "url(https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=1800&q=80)",
+          backgroundSize: "cover", backgroundPosition: "center",
+          filter: "brightness(0.12)",
+        }} />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="section-tag">Portafolio de Servicios</div>
           <h1 style={{ fontSize: "clamp(2rem, 5vw, 3.2rem)", fontWeight: "900", color: "white", marginBottom: "1rem" }}>
