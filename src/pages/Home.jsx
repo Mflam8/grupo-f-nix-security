@@ -183,33 +183,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── VISUAL STRIP ── */}
+      {/* ── PHOTO STRIP ── */}
       <section style={{ overflow: "hidden", background: "#000", padding: "0" }}>
         <div style={{ display: "flex", gap: "3px" }}>
           {[
-            { icon: Shield, label: "Seguridad Armada", color: "#1a1000" },
-            { icon: Camera, label: "Vigilancia Electrónica", color: "#0a0a14" },
-            { icon: Lock, label: "Ciberseguridad", color: "#0a1200" },
-            { icon: Search, label: "Investigaciones", color: "#14000a" },
-          ].map((item, i) => {
-            const Icon = item.icon;
-            return (
-              <div key={i} style={{
-                flex: 1, height: "180px", overflow: "hidden", position: "relative",
-                background: `linear-gradient(145deg, ${item.color}, #000)`,
-                borderTop: `2px solid rgba(245,197,24,0.15)`,
-                display: "flex", flexDirection: "column",
-                alignItems: "center", justifyContent: "center", gap: "10px",
-                transition: "all 0.3s ease", cursor: "default",
-              }}
-              onMouseEnter={e => { e.currentTarget.style.borderTopColor = GOLD; e.currentTarget.style.background = `linear-gradient(145deg, ${item.color.replace("0a", "1a")}, #050505)`; }}
-              onMouseLeave={e => { e.currentTarget.style.borderTopColor = "rgba(245,197,24,0.15)"; e.currentTarget.style.background = `linear-gradient(145deg, ${item.color}, #000)`; }}
-              >
-                <Icon style={{ color: GOLD, width: "32px", height: "32px", opacity: 0.8 }} />
-                <span style={{ color: "#777", fontSize: "0.72rem", letterSpacing: "1.5px", textAlign: "center", padding: "0 8px" }}>{item.label.toUpperCase()}</span>
+            { img: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=75", label: "Seguridad Física" },
+            { img: "https://images.unsplash.com/photo-1563453392212-326f5e854473?w=600&q=75", label: "Vigilancia Electrónica" },
+            { img: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&q=75", label: "Ciberseguridad" },
+            { img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=75", label: "Investigaciones" },
+          ].map((item, i) => (
+            <div key={i} style={{ flex: 1, height: "200px", overflow: "hidden", position: "relative" }}
+              className="photo-strip-item">
+              <img src={item.img} alt={item.label}
+                style={{ width: "100%", height: "100%", objectFit: "cover", filter: "brightness(0.45)", transition: "transform 0.5s ease" }} />
+              <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 60%)" }} />
+              <div style={{ position: "absolute", bottom: "14px", left: "0", right: "0", textAlign: "center", color: "#aaa", fontSize: "0.7rem", letterSpacing: "2px", fontWeight: "600" }}>
+                {item.label.toUpperCase()}
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </section>
 
