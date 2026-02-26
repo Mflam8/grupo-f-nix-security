@@ -156,52 +156,70 @@ export default function Servicios() {
             {services.map((s, i) => {
               const Icon = s.icon;
               return (
-                <div key={i} className="gold-card" style={{ padding: "2.5rem" }}>
-                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    {/* Left: title & meta */}
-                    <div>
-                      <div className="flex items-center gap-3 mb-4">
-                        <div style={{
-                          width: "52px", height: "52px",
-                          background: "rgba(245,197,24,0.1)",
-                          borderRadius: "12px",
-                          display: "flex", alignItems: "center", justifyContent: "center",
-                          border: "1px solid rgba(245,197,24,0.25)",
-                          flexShrink: 0,
-                        }}>
-                          <Icon style={{ color: GOLD, width: "26px", height: "26px" }} />
-                        </div>
-                        <div style={{
-                          background: "rgba(245,197,24,0.1)",
-                          color: GOLD, fontSize: "0.75rem", fontWeight: "800",
-                          padding: "4px 12px", borderRadius: "100px", letterSpacing: "1px",
-                        }}>
-                          {s.num}
-                        </div>
+                <div key={i} className="gold-card" style={{ padding: "0", overflow: "hidden" }}>
+                  <div className="grid grid-cols-1 lg:grid-cols-4">
+                    {/* Photo column */}
+                    <div style={{ height: "220px", position: "relative", overflow: "hidden" }} className="lg:h-auto">
+                      <img
+                        src={SERVICE_PHOTOS[i]}
+                        alt={s.title}
+                        style={{ width: "100%", height: "100%", objectFit: "cover", filter: "brightness(0.55)" }}
+                      />
+                      <div style={{
+                        position: "absolute", inset: 0,
+                        background: "linear-gradient(to right, rgba(0,0,0,0.4) 0%, transparent 60%)",
+                      }} />
+                      <div style={{
+                        position: "absolute", bottom: "16px", left: "16px",
+                        background: "rgba(245,197,24,0.15)",
+                        border: "1px solid rgba(245,197,24,0.3)",
+                        color: GOLD, fontSize: "0.75rem", fontWeight: "800",
+                        padding: "4px 12px", borderRadius: "100px", letterSpacing: "1px",
+                      }}>
+                        {s.num}
                       </div>
-                      <h2 style={{ color: "white", fontWeight: "800", fontSize: "1.15rem", marginBottom: "0.6rem", lineHeight: "1.35" }}>
-                        {s.title}
-                      </h2>
-                      <p style={{ color: GOLD, fontSize: "0.8rem", fontWeight: "600", marginBottom: "1rem" }}>
-                        {s.subtitle}
-                      </p>
-                      <p style={{ color: "#777", fontSize: "0.875rem", lineHeight: "1.75" }}>
-                        {s.desc}
-                      </p>
                     </div>
 
-                    {/* Right: items */}
-                    <div className="lg:col-span-2">
-                      <div style={{ color: "#444", fontSize: "0.72rem", letterSpacing: "2px", marginBottom: "1.25rem" }}>
-                        INCLUYE
-                      </div>
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        {s.items.map((item, j) => (
-                          <div key={j} className="flex items-start gap-2">
-                            <CheckCircle style={{ color: GOLD, width: "15px", height: "15px", marginTop: "2px", flexShrink: 0 }} />
-                            <span style={{ color: "#aaa", fontSize: "0.875rem" }}>{item}</span>
+                    {/* Content */}
+                    <div className="lg:col-span-3" style={{ padding: "2.5rem" }}>
+                      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                        {/* Left: title & meta */}
+                        <div>
+                          <div style={{
+                            width: "48px", height: "48px",
+                            background: "rgba(245,197,24,0.1)",
+                            borderRadius: "12px",
+                            display: "flex", alignItems: "center", justifyContent: "center",
+                            border: "1px solid rgba(245,197,24,0.25)",
+                            marginBottom: "1rem",
+                          }}>
+                            <Icon style={{ color: GOLD, width: "24px", height: "24px" }} />
                           </div>
-                        ))}
+                          <h2 style={{ color: "white", fontWeight: "800", fontSize: "1.1rem", marginBottom: "0.5rem", lineHeight: "1.35" }}>
+                            {s.title}
+                          </h2>
+                          <p style={{ color: GOLD, fontSize: "0.78rem", fontWeight: "600", marginBottom: "0.75rem" }}>
+                            {s.subtitle}
+                          </p>
+                          <p style={{ color: "#777", fontSize: "0.85rem", lineHeight: "1.75" }}>
+                            {s.desc}
+                          </p>
+                        </div>
+
+                        {/* Right: items */}
+                        <div className="lg:col-span-2">
+                          <div style={{ color: "#444", fontSize: "0.72rem", letterSpacing: "2px", marginBottom: "1.25rem" }}>
+                            INCLUYE
+                          </div>
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            {s.items.map((item, j) => (
+                              <div key={j} className="flex items-start gap-2">
+                                <CheckCircle style={{ color: GOLD, width: "14px", height: "14px", marginTop: "3px", flexShrink: 0 }} />
+                                <span style={{ color: "#aaa", fontSize: "0.85rem" }}>{item}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
