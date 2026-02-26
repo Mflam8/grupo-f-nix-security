@@ -156,10 +156,15 @@ export default function Servicios() {
         .reveal { opacity:0; transform:translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
         .reveal.revealed { opacity:1; transform:translateY(0); }
         @media (max-width: 768px) {
-          .servicios-hero-title { font-size: 2.8rem !important; }
-          .servicios-cta-buttons { flex-direction: column !important; align-items: center !important; }
-          .servicios-cta-buttons a { width: 100%; max-width: 340px; justify-content: center; }
+          .servicios-hero-title { font-size: 2.6rem !important; }
+          .servicios-cta-buttons { flex-direction: column !important; align-items: stretch !important; }
+          .servicios-cta-buttons a { width: 100% !important; justify-content: center !important; }
           .service-img-panel { display: none !important; }
+          .service-row > div { grid-template-columns: 1fr !important; }
+        }
+        @media (max-width: 480px) {
+          .servicios-hero-title { font-size: 2rem !important; }
+          .item-pill { padding: 8px 10px !important; }
         }
       `}</style>
 

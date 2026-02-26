@@ -83,9 +83,13 @@ export default function Contacto() {
         .reveal:nth-child(5) { transition-delay: 0.4s; }
         .reveal:nth-child(6) { transition-delay: 0.5s; }
         @media (max-width: 768px) {
-          .contacto-hero-title { font-size: 2.8rem !important; }
-          .contacto-cta-buttons { flex-direction: column !important; align-items: center !important; }
-          .contacto-cta-buttons a { width: 100%; max-width: 340px; justify-content: center; }
+          .contacto-hero-title { font-size: 2.6rem !important; }
+          .contacto-cta-buttons { flex-direction: column !important; align-items: stretch !important; }
+          .contacto-cta-buttons a { width: 100% !important; justify-content: center !important; }
+        }
+        @media (max-width: 480px) {
+          .contacto-hero-title { font-size: 2rem !important; }
+          .contact-card { padding: 1.5rem !important; }
         }
       `}</style>
 

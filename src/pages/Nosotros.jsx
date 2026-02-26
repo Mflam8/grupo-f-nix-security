@@ -73,9 +73,13 @@ export default function Nosotros() {
         .reveal:nth-child(3) { transition-delay: 0.2s; }
         .reveal:nth-child(4) { transition-delay: 0.3s; }
         @media (max-width: 768px) {
-          .nosotros-hero-title { font-size: 2.8rem !important; }
-          .nosotros-cta-buttons { flex-direction: column !important; align-items: center !important; }
-          .nosotros-cta-buttons a { width: 100%; max-width: 340px; justify-content: center; }
+          .nosotros-hero-title { font-size: 2.6rem !important; }
+          .nosotros-cta-buttons { flex-direction: column !important; align-items: stretch !important; }
+          .nosotros-cta-buttons a { width: 100% !important; justify-content: center !important; }
+          .valor-card { margin-bottom: 0 !important; }
+        }
+        @media (max-width: 480px) {
+          .nosotros-hero-title { font-size: 2rem !important; }
         }
       `}</style>
 
