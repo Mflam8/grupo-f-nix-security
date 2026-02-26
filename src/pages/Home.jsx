@@ -6,17 +6,7 @@ import {
   Clock, Globe, Award, Users, CheckCircle, ChevronRight, MessageCircle,
 } from "lucide-react";
 
-// Fotos reales de Grupo Fénix
-const PHOTOS = {
-  hero1: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/8e41d4cdc_WhatsAppImage2026-02-25at55135PM2.jpg",
-  hero2: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/e6d5d6efa_WhatsAppImage2026-02-25at55135PM3.jpg",
-  flyer: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/b57dc13c4_WhatsAppImage2026-02-25at55136PM1.jpg",
-  convoy1: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/c612917a9_WhatsAppImage2026-02-25at55137PM3.jpg",
-  agent1: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/e22d9e636_WhatsAppImage2026-02-25at55137PM2.jpg",
-  nightOp: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/516ccb11b_WhatsAppImage2026-02-25at55136PM5.jpg",
-  logistic: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/48a3b16d1_WhatsAppImage2026-02-25at55138PM1.jpg",
-  team: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/a0208d78f_WhatsAppImage2026-02-25at55138PM.jpg",
-};
+
 
 function useScrollReveal() {
   useEffect(() => {
