@@ -326,21 +326,39 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Image + cards grid */}
+            {/* Visual panel — stat showcase */}
             <div className="reveal">
-              {/* Real team photo */}
+              {/* Large visual placeholder with gold accent */}
               <div style={{
                 borderRadius: "14px",
-                overflow: "hidden",
                 border: "1px solid rgba(245,197,24,0.2)",
                 marginBottom: "1rem",
                 height: "280px",
+                background: "linear-gradient(135deg, #0d0900 0%, #000 100%)",
+                display: "flex", alignItems: "center", justifyContent: "center",
+                position: "relative", overflow: "hidden",
               }}>
-                <img
-                  src={PHOTOS.team}
-                  alt="Equipo Grupo Fénix"
-                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 20%" }}
-                />
+                {/* Background grid */}
+                <div style={{
+                  position: "absolute", inset: 0,
+                  backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 29px, rgba(245,197,24,0.04) 30px), repeating-linear-gradient(90deg, transparent, transparent 29px, rgba(245,197,24,0.04) 30px)",
+                }} />
+                {/* Central content */}
+                <div style={{ textAlign: "center", zIndex: 1 }}>
+                  <Users style={{ color: GOLD, width: "48px", height: "48px", margin: "0 auto 12px", opacity: 0.7 }} />
+                  <div style={{ color: "white", fontWeight: "800", fontSize: "1.1rem" }}>Equipo de Élite</div>
+                  <div style={{ color: "#555", fontSize: "0.8rem", marginTop: "4px" }}>Personal Certificado ANSP · VSA · Psicológico</div>
+                  <div style={{
+                    marginTop: "16px", display: "flex", gap: "20px", justifyContent: "center",
+                  }}>
+                    {[{ v: "100%", l: "Certificados" }, { v: "24/7", l: "Disponibles" }, { v: "PNC", l: "#406" }].map((s, i) => (
+                      <div key={i} style={{ textAlign: "center" }}>
+                        <div style={{ color: GOLD, fontWeight: "900", fontSize: "1.2rem" }}>{s.v}</div>
+                        <div style={{ color: "#666", fontSize: "0.65rem" }}>{s.l}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 {differentiators.map((d, i) => {
