@@ -268,7 +268,7 @@ export default function Home() {
                 boxShadow: "0 40px 100px rgba(0,0,0,0.6)",
               }}>
                 <img
-                  src="https://images.unsplash.com/photo-1582139329536-e7284fece509?w=900&q=85"
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/bb02547ec_WhatsAppImage2026-02-25at55137PM2.jpg"
                   alt="Agentes de seguridad Grupo Fénix"
                   style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", filter: "brightness(0.75)" }}
                 />
