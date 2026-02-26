@@ -3,6 +3,18 @@ import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { ShieldCheck, Shield, Camera, Lock, Search, GraduationCap, CheckCircle } from "lucide-react";
 
+const HERO_PHOTO = "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/8e41d4cdc_WhatsAppImage2026-02-25at55135PM2.jpg";
+
+// Map each service to a real photo
+const SERVICE_PHOTOS = [
+  "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/b57dc13c4_WhatsAppImage2026-02-25at55136PM1.jpg",  // 01 – asesoría (flyer)
+  "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/8e41d4cdc_WhatsAppImage2026-02-25at55135PM2.jpg",  // 02 – armada (equipo)
+  "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/90e17de81_WhatsAppImage2026-02-25at55136PM.jpg",   // 03 – electrónica (convoy día)
+  "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/516ccb11b_WhatsAppImage2026-02-25at55136PM5.jpg", // 04 – ciber (noche)
+  "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/e22d9e636_WhatsAppImage2026-02-25at55137PM2.jpg", // 05 – investigaciones (agente)
+  "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/48a3b16d1_WhatsAppImage2026-02-25at55138PM1.jpg", // 06 – adiestramiento (logística)
+];
+
 const GOLD = "#F5C518";
 const WHATSAPP_URL =
   "https://wa.me/50361165075?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20Grupo%20F%C3%A9nix.";
