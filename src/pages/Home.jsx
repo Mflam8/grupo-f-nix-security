@@ -648,7 +648,7 @@ export default function Home() {
           <p style={{ color: "#888", marginBottom: "3rem", fontSize: "1.05rem", lineHeight: "1.8", maxWidth: "500px", margin: "0 auto 3rem" }}>
             Reciba una evaluación de seguridad personalizada y sin compromiso. Nuestro equipo de especialistas le atenderá de inmediato.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="cta-section-buttons flex flex-wrap gap-4 justify-center">
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" style={{
               display: "inline-flex", alignItems: "center", gap: "10px",
               background: "#25D366", color: "white", fontWeight: "700",
