@@ -78,30 +78,18 @@ export default function Nosotros() {
               </div>
             </div>
 
-            <div>
-              {/* Real photo */}
-              <div style={{
-                borderRadius: "14px",
-                overflow: "hidden",
-                border: "1px solid rgba(245,197,24,0.2)",
-                marginBottom: "1rem",
-                height: "300px",
-              }}>
-                <img src={PHOTOS.team} alt="Equipo Grupo Fénix" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 20%" }} />
-              </div>
-              <div className="grid grid-cols-2 gap-3">
-                {[
-                  { value: "406", label: "Licencia PNC" },
-                  { value: "24/7", label: "Centro de Operaciones" },
-                  { value: "3+", label: "Membresías Nacionales" },
-                  { value: "100%", label: "Personal Certificado" },
-                ].map((s, i) => (
-                  <div key={i} className="gold-card text-center" style={{ padding: "1.5rem 1rem" }}>
-                    <div style={{ fontSize: "2.2rem", fontWeight: "900", color: GOLD, lineHeight: "1" }}>{s.value}</div>
-                    <div style={{ color: "#666", fontSize: "0.78rem", marginTop: "0.5rem" }}>{s.label}</div>
-                  </div>
-                ))}
-              </div>
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { value: "406", label: "Licencia PNC" },
+                { value: "24/7", label: "Centro de Operaciones" },
+                { value: "3+", label: "Membresías Nacionales" },
+                { value: "100%", label: "Personal Certificado" },
+              ].map((s, i) => (
+                <div key={i} className="gold-card text-center" style={{ padding: "2.25rem 1.5rem" }}>
+                  <div style={{ fontSize: "2.8rem", fontWeight: "900", color: GOLD, lineHeight: "1" }}>{s.value}</div>
+                  <div style={{ color: "#666", fontSize: "0.82rem", marginTop: "0.5rem" }}>{s.label}</div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
