@@ -547,7 +547,7 @@ export default function Home() {
               </div>
 
               {/* Mini diff cards */}
-              <div className="grid grid-cols-2 gap-3">
+              <div className="diff-cards-grid grid grid-cols-2 gap-3">
                 {differentiators.map((d, i) => {
                   const Icon = d.icon;
                   return (
