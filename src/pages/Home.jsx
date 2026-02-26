@@ -200,7 +200,7 @@ export default function Home() {
                 </span>
               </div>
 
-              <h1 style={{
+              <h1 className="hero-title" style={{
                 fontSize: "clamp(2.8rem, 6.5vw, 5.5rem)", fontWeight: "900",
                 lineHeight: "1.05", marginBottom: "1.75rem", color: "white",
                 animation: "fadeUp 0.9s ease 0.2s both",
