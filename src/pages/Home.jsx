@@ -135,21 +135,71 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Hero image card */}
-            <div className="hidden lg:block">
-              <div style={{
-                borderRadius: "16px",
-                overflow: "hidden",
-                border: "1px solid rgba(245,197,24,0.2)",
-                boxShadow: "0 0 60px rgba(245,197,24,0.08)",
-                height: "520px",
-              }}>
-                <img
-                  src={PHOTOS.flyer}
-                  alt="Grupo Fénix – Seguridad que inspira confianza"
-                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }}
-                />
+            {/* Hero visual — animated shield placeholder */}
+            <div className="hidden lg:flex items-center justify-center">
+              <div style={{ position: "relative", width: "420px", height: "480px" }}>
+                {/* Outer glow ring */}
+                <div style={{
+                  position: "absolute", inset: "-30px",
+                  borderRadius: "50%",
+                  background: "radial-gradient(circle, rgba(245,197,24,0.13) 0%, transparent 68%)",
+                  animation: "pulse 3s ease-in-out infinite",
+                }} />
+                {/* Rotating dashed ring */}
+                <div style={{
+                  position: "absolute", inset: "20px",
+                  borderRadius: "50%",
+                  border: "1px dashed rgba(245,197,24,0.2)",
+                  animation: "spin 18s linear infinite",
+                }} />
+                {/* Static ring */}
+                <div style={{
+                  position: "absolute", inset: "60px",
+                  borderRadius: "50%",
+                  border: "1px solid rgba(245,197,24,0.12)",
+                }} />
+                {/* Central card */}
+                <div style={{
+                  position: "absolute", inset: "50px",
+                  background: "linear-gradient(145deg, #111 0%, #0a0700 100%)",
+                  borderRadius: "20px",
+                  border: "1px solid rgba(245,197,24,0.25)",
+                  display: "flex", flexDirection: "column",
+                  alignItems: "center", justifyContent: "center", gap: "16px",
+                  boxShadow: "0 0 80px rgba(245,197,24,0.1) inset",
+                }}>
+                  <ShieldCheck style={{ color: GOLD, width: "72px", height: "72px", filter: "drop-shadow(0 0 20px rgba(245,197,24,0.5))" }} />
+                  <div style={{ color: GOLD, fontWeight: "900", fontSize: "1.3rem", letterSpacing: "4px" }}>GRUPO FÉNIX</div>
+                  <div style={{ color: "#555", fontSize: "0.7rem", letterSpacing: "2.5px" }}>SEGURIDAD INTEGRAL</div>
+                  <div style={{
+                    marginTop: "8px", background: "rgba(245,197,24,0.08)",
+                    border: "1px solid rgba(245,197,24,0.2)", borderRadius: "100px",
+                    padding: "6px 20px", color: "#aaa", fontSize: "0.72rem", letterSpacing: "1px",
+                  }}>
+                    PNC #406 · BASC · MAPFRE
+                  </div>
+                </div>
+                {/* Floating badges */}
+                {[
+                  { label: "24/7 COS", top: "5%", right: "-8%" },
+                  { label: "Cobertura Nacional", bottom: "18%", left: "-12%" },
+                  { label: "100% Certificado", top: "38%", right: "-14%" },
+                ].map((b, i) => (
+                  <div key={i} style={{
+                    position: "absolute", top: b.top, bottom: b.bottom, left: b.left, right: b.right,
+                    background: "#0d0d0d", border: "1px solid #2a2a2a",
+                    borderRadius: "8px", padding: "8px 14px",
+                    color: "#ccc", fontSize: "0.72rem", fontWeight: "600",
+                    whiteSpace: "nowrap", boxShadow: "0 4px 20px rgba(0,0,0,0.4)",
+                  }}>
+                    <span style={{ color: GOLD, marginRight: "6px" }}>●</span>{b.label}
+                  </div>
+                ))}
               </div>
+              <style>{`
+                @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+                @keyframes pulse { 0%,100% { opacity:0.6; transform:scale(1); } 50% { opacity:1; transform:scale(1.05); } }
+              `}</style>
             </div>
           </div>
         </div>
