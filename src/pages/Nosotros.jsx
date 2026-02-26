@@ -36,13 +36,20 @@ export default function Nosotros() {
   return (
     <div style={{ background: "#000", color: "white" }}>
       {/* ── PAGE HEADER ── */}
-      <div className="page-header">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="page-header" style={{ position: "relative" }}>
+        <div style={{
+          position: "absolute", inset: 0,
+          backgroundImage: `url(${PHOTOS.flyer})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center 30%",
+          filter: "brightness(0.18)",
+        }} />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" style={{ position: "relative", zIndex: 1 }}>
           <div className="section-tag">Quiénes Somos</div>
           <h1 style={{ fontSize: "clamp(2rem, 5vw, 3.2rem)", fontWeight: "900", color: "white", marginBottom: "1rem" }}>
             Así somos en <span style={{ color: GOLD }}>Grupo Fénix</span>
           </h1>
-          <p style={{ color: "#777", maxWidth: "560px", margin: "0 auto", fontSize: "1rem", lineHeight: "1.75" }}>
+          <p style={{ color: "#bbb", maxWidth: "560px", margin: "0 auto", fontSize: "1rem", lineHeight: "1.75" }}>
             Un equipo de profesionales dedicados a brindar soluciones de seguridad integral, innovadoras y personalizadas para proteger lo que más importa.
           </p>
         </div>
