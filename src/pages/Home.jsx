@@ -366,7 +366,7 @@ export default function Home() {
         <div style={{ display: "flex", gap: "2px" }}>
           {[
             { img: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80", label: "Seguridad Física", icon: Shield },
-            { img: "https://images.unsplash.com/photo-1563453392212-326f5e854473?w=600&q=80", label: "Vigilancia CCTV", icon: Camera },
+            { img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/343f05c5d_ChatGPTImageFeb28202605_52_55PM.png", label: "Vigilancia CCTV", icon: Camera },
             { img: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&q=80", label: "Ciberseguridad", icon: Lock },
             { img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80", label: "Investigaciones", icon: Search },
           ].map((item, i) => {
