@@ -476,31 +476,11 @@ export default function Home() {
                 boxShadow: "0 40px 100px rgba(0,0,0,0.6)",
               }}>
                 <img
-                  src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=900&q=85"
-                  alt="Equipo profesional de seguridad"
-                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 25%", filter: "brightness(0.55)" }}
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/67592f8da_2.png"
+                  alt="Seguridad que inspira confianza"
+                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", filter: "brightness(0.9)" }}
                 />
-                <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 50%)" }} />
-
-                {/* Inline stats overlay */}
-                <div style={{
-                  position: "absolute", bottom: 0, left: 0, right: 0,
-                  padding: "2rem",
-                  display: "grid", gridTemplateColumns: "1fr 1fr 1fr",
-                  borderTop: "1px solid rgba(245,197,24,0.15)",
-                  gap: "0",
-                }}>
-                  {[
-                    { v: "100%", l: "Certificados" },
-                    { v: "24/7", l: "COS Activo" },
-                    { v: "<10'", l: "Respuesta" },
-                  ].map((s, i) => (
-                    <div key={i} style={{ textAlign: "center", borderRight: i < 2 ? "1px solid rgba(255,255,255,0.08)" : "none" }}>
-                      <div style={{ color: GOLD, fontWeight: "900", fontSize: "1.4rem" }}>{s.v}</div>
-                      <div style={{ color: "#777", fontSize: "0.68rem", marginTop: "2px" }}>{s.l}</div>
-                    </div>
-                  ))}
-                </div>
+                <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.3) 0%, transparent 50%)" }} />
               </div>
 
               {/* Gold accent line */}
@@ -616,9 +596,9 @@ export default function Home() {
         {/* Background photo */}
         <div style={{
           position: "absolute", inset: 0,
-          backgroundImage: "url(https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1800&q=80)",
+          backgroundImage: "url(https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/bfacb66ff_6.png)",
           backgroundSize: "cover", backgroundPosition: "center",
-          filter: "brightness(0.12)",
+          filter: "brightness(0.2)",
         }} />
         <div style={{
           position: "absolute", inset: 0,

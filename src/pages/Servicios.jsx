@@ -28,7 +28,7 @@ const services = [
     title: "Seguridad Armada y No Armada",
     subtitle: "Protección física integral de personas e instalaciones",
     desc: "Personal especializado para la protección de instalaciones, personas y transporte en todo el territorio nacional.",
-    img: "https://images.unsplash.com/photo-1582139329536-e7284fece509?w=700&q=80",
+    img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/1c790d1e4_3.png",
     items: [
       "Seguridad Comercial, Industrial, Bancaria y Residencial",
       "Protección de personas VIP, escoltas y Alta Seguridad",

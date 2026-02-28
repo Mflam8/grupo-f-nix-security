@@ -255,9 +255,9 @@ export default function Nosotros() {
                 boxShadow: "0 40px 100px rgba(0,0,0,0.6)",
               }}>
                 <img
-                  src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=900&q=80"
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/cf269765b_1.png"
                   alt="Equipo Grupo Fénix en operación"
-                  style={{ width: "100%", height: "100%", objectFit: "cover", filter: "brightness(0.55)" }}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", filter: "brightness(0.7)" }}
                 />
                 <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 55%)" }} />
                 <div style={{
