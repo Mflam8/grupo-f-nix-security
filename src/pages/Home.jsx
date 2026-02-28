@@ -268,9 +268,9 @@ export default function Home() {
                 boxShadow: "0 40px 100px rgba(0,0,0,0.6)",
               }}>
                 <img
-                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/bb02547ec_WhatsAppImage2026-02-25at55137PM2.jpg"
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/cf269765b_1.png"
                   alt="Agentes de seguridad Grupo Fénix"
-                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", filter: "brightness(0.75)" }}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", filter: "brightness(0.85)" }}
                 />
                 <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 55%)" }} />
                 {/* Bottom label */}
