@@ -96,7 +96,7 @@ const services = [
     title: "Adiestramiento y Formación de Seguridad",
     subtitle: "Capacitación especializada y manejo de crisis",
     desc: "Programas de formación, consultoría y adiestramiento para personal de seguridad y empresas.",
-    img: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=700&q=80",
+    img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/24e6a83fa_ChatGPTImageFeb28202605_45_37PM.png",
     items: [
       "Formación y Auditorías de Seguridad",
       "Capacitación y Adiestramiento especializado",
