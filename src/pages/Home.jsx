@@ -282,7 +282,7 @@ export default function Home() {
 
               {/* Floating badge — PNC */}
               <div style={{
-                position: "absolute", bottom: "-20px", left: "-30px",
+                position: "absolute", top: "-20px", left: "-30px",
                 background: "linear-gradient(135deg, #111, #0a0700)",
                 border: "1px solid rgba(245,197,24,0.4)", borderRadius: "14px",
                 padding: "18px 24px", boxShadow: "0 12px 40px rgba(0,0,0,0.7)",
