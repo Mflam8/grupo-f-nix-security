@@ -252,7 +252,7 @@ export default function Nosotros() {
                 <img
                   src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/a694eba3e_5.png"
                   alt="Logo Grupo Fénix"
-                  style={{ width: "90%", height: "90%", objectFit: "contain" }}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", transform: "scale(1.2)" }}
                 />
               </div>
 
