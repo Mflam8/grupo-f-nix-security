@@ -292,7 +292,7 @@ export default function Home() {
             </div>
 
             {/* RIGHT — Photo with floating cards */}
-            <div className="hidden lg:block" style={{ position: "relative", animation: "fadeIn 1.2s ease 0.4s both" }}>
+            <div style={{ position: "relative", animation: "fadeIn 1.2s ease 0.4s both" }}>
               {/* Main photo card */}
               <div style={{
                 borderRadius: "20px", overflow: "hidden",
