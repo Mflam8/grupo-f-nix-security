@@ -508,10 +508,10 @@ export default function Home() {
 
             {/* Left — Photo with overlay cards */}
             <div className="reveal" style={{ position: "relative" }}>
-              <div style={{
+              <div className="h-[350px] md:h-[450px] lg:h-[520px]" style={{
                 borderRadius: "20px", overflow: "hidden",
                 border: "1px solid rgba(245,197,24,0.15)",
-                height: "520px", position: "relative",
+                position: "relative",
                 boxShadow: "0 40px 100px rgba(0,0,0,0.6)",
               }}>
                 <img
