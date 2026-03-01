@@ -139,7 +139,7 @@ export default function Servicios() {
   }, []);
 
   return (
-    <div style={{ background: "#000", color: "white", overflowX: "clip" }}>
+    <div style={{ background: "#000", color: "white" }}>
       <style>{`
         @keyframes fadeUp { from { opacity:0; transform:translateY(40px); } to { opacity:1; transform:translateY(0); } }
         @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
