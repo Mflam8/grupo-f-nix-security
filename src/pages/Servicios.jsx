@@ -258,13 +258,30 @@ export default function Servicios() {
           </div>
 
           <div style={{
-            display: "flex", flexWrap: "wrap", gap: "20px", marginTop: "3rem",
+            display: "flex", flexWrap: "wrap", gap: "12px", marginTop: "3rem",
             animation: "fadeUp 0.9s ease 0.8s both",
+            alignItems: "center"
           }}>
-            {["PNC #406", "BASC", "UNAPS", "MAPFRE"].map((b, i) => (
-              <div key={i} style={{ display: "flex", alignItems: "center", gap: "6px", color: "#666", fontSize: "0.78rem" }}>
-                <CheckCircle size={13} style={{ color: GOLD }} />
-                <span>{b}</span>
+            <div style={{
+              display: "flex", alignItems: "center", gap: "6px",
+              color: "#ccc", fontSize: "0.85rem", fontWeight: "bold",
+              background: "rgba(255,255,255,0.1)", padding: "8px 12px", borderRadius: "8px", height: "46px"
+            }}>
+              <CheckCircle size={16} style={{ color: GOLD }} />
+              <span>PNC #406</span>
+            </div>
+            {[
+              { img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/b467792dd_8.png", alt: "BASC" },
+              { img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/50353a604_9.png", alt: "UNAPS" },
+              { img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/e2644239e_10.png", alt: "Cámara de Comercio" },
+              { img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/36e9b4682_11.png", alt: "MAPFRE" }
+            ].map((logo, i) => (
+              <div key={i} style={{
+                display: "flex", alignItems: "center", justifyContent: "center",
+                background: "white", borderRadius: "8px", padding: "6px 12px",
+                height: "46px", minWidth: "80px"
+              }}>
+                <img src={logo.img} alt={logo.alt} style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} />
               </div>
             ))}
           </div>
