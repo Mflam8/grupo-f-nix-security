@@ -649,11 +649,11 @@ export default function Home() {
           position: "absolute", inset: 0,
           backgroundImage: "url(https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/bfacb66ff_6.png)",
           backgroundSize: "cover", backgroundPosition: "center",
-          filter: "brightness(0.2)",
+          filter: "brightness(0.4)",
         }} />
         <div style={{
           position: "absolute", inset: 0,
-          background: "linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.85))",
+          background: "linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.65))",
         }} />
         {/* Gold radial center */}
         <div style={{
