@@ -314,18 +314,19 @@ export default function Servicios() {
                   borderRadius: "20px", overflow: "hidden",
                   boxShadow: "0 4px 30px rgba(0,0,0,0.5)",
                 }}>
-                  <div className="grid grid-cols-1 lg:grid-cols-3">
+                  <div className="flex flex-col lg:grid lg:grid-cols-3">
                     {/* Image panel */}
                     <div className="service-img-panel" style={{
                       position: "relative", overflow: "hidden",
                       gridColumn: isEven ? "1" : "3",
                       gridRow: "1",
-                      minHeight: "280px",
+                      minHeight: "250px",
                     }}>
                       <img src={s.img} alt={s.title} className="service-img"
-                        style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: s.num === "06" ? "right center" : "center", filter: "brightness(0.55)" }}
+                        style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: s.num === "06" ? "right center" : "center", filter: "brightness(0.55)" }}
                       />
-                      <div style={{ position: "absolute", inset: 0, background: isEven ? "linear-gradient(to right, transparent 60%, #0b0b0b 100%)" : "linear-gradient(to left, transparent 60%, #0b0b0b 100%)" }} />
+                      <div className="hidden lg:block" style={{ position: "absolute", inset: 0, background: isEven ? "linear-gradient(to right, transparent 60%, #0b0b0b 100%)" : "linear-gradient(to left, transparent 60%, #0b0b0b 100%)" }} />
+                      <div className="lg:hidden" style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, transparent 40%, #0b0b0b 100%)" }} />
                       {/* Number overlay */}
                       <div style={{
                         position: "absolute", bottom: "20px", left: "50%", transform: "translateX(-50%)",
@@ -337,7 +338,7 @@ export default function Servicios() {
                     <div style={{
                       gridColumn: isEven ? "2 / 4" : "1 / 3",
                       gridRow: "1",
-                      padding: "2.5rem 3rem",
+                      padding: "clamp(1.5rem, 5vw, 2.5rem)",
                     }}>
                       <div className="flex items-center gap-3 mb-5">
                         <div style={{
