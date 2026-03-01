@@ -30,6 +30,10 @@ export default function Layout({ children, currentPageName }) {
     return () => { document.body.style.overflow = ""; };
   }, [mobileOpen]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPageName]);
+
   return (
     <div style={{ minHeight: "100vh", background: "#000", color: "white" }}>
       {/* ── NAVBAR ── */}
