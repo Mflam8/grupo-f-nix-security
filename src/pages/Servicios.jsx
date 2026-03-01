@@ -159,7 +159,6 @@ export default function Servicios() {
           .servicios-hero-title { font-size: 2.6rem !important; }
           .servicios-cta-buttons { flex-direction: column !important; align-items: stretch !important; }
           .servicios-cta-buttons a { width: 100% !important; justify-content: center !important; }
-          .service-img-panel { display: none !important; }
           .service-row > div { grid-template-columns: 1fr !important; }
         }
         @media (max-width: 480px) {
