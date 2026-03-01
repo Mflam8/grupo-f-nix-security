@@ -388,12 +388,12 @@ export default function Home() {
             { img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/053d32d20_foto_2_guardia_carro.jpg", label: "Seguridad Física", icon: Shield },
             { img: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&q=80", label: "Ciberseguridad", icon: Lock },
             { img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/343f05c5d_ChatGPTImageFeb28202605_52_55PM.png", label: "Vigilancia CCTV", icon: Camera },
-            { img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/389d64bdc_ChatGPTImageFeb28202606_34_50PM.png", label: "Investigaciones", icon: Search },
+            { img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/1f0636579_ChatGPTImageFeb28202606_31_05PM.png", label: "Investigaciones", icon: Search },
             // Duplicados para animación infinita
             { img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/053d32d20_foto_2_guardia_carro.jpg", label: "Seguridad Física", icon: Shield },
             { img: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&q=80", label: "Ciberseguridad", icon: Lock },
             { img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/343f05c5d_ChatGPTImageFeb28202605_52_55PM.png", label: "Vigilancia CCTV", icon: Camera },
-            { img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/389d64bdc_ChatGPTImageFeb28202606_34_50PM.png", label: "Investigaciones", icon: Search },
+            { img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/1f0636579_ChatGPTImageFeb28202606_31_05PM.png", label: "Investigaciones", icon: Search },
           ].map((item, i) => {
             const Icon = item.icon;
             return (
