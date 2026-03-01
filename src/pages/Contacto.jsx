@@ -100,7 +100,7 @@ export default function Contacto() {
       }}>
         <div style={{
           position: "absolute", inset: "-10%",
-          backgroundImage: "url(https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920&q=90)",
+          backgroundImage: "url(https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/cebd91568_foto_1_pickup_guardia.jpg)",
           backgroundSize: "cover", backgroundPosition: "center",
           filter: "brightness(0.18) contrast(1.1)",
           transform: `translate(${(mousePos.x - 0.5) * -15}px, ${(mousePos.y - 0.5) * -10}px)`,
@@ -145,8 +145,8 @@ export default function Contacto() {
             lineHeight: "1.05", marginBottom: "1.75rem", color: "white",
             animation: "fadeUp 0.9s ease 0.2s both",
           }}>
-            Estamos aquí para<br />
-            <span style={{ color: GOLD, textShadow: "0 0 40px rgba(245,197,24,0.4)" }}>protegerle</span>
+            Estamos aqui para<br />
+            <span style={{ color: GOLD, textShadow: "0 0 40px rgba(245,197,24,0.4)" }}>protegerte</span>
           </h1>
 
           <p style={{
