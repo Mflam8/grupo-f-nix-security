@@ -90,7 +90,7 @@ export default function Nosotros() {
       }}>
         <div style={{
           position: "absolute", inset: "-10%",
-          backgroundImage: "url(https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1920&q=90)",
+          backgroundImage: "url(https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/5a580165f_WhatsAppImage2026-02-26at113000AM.jpg)",
           backgroundSize: "cover", backgroundPosition: "center top",
           filter: "brightness(0.18) contrast(1.1)",
           transform: `translate(${(mousePos.x - 0.5) * -15}px, ${(mousePos.y - 0.5) * -10}px)`,
