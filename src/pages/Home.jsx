@@ -603,25 +603,37 @@ export default function Home() {
           <div style={{ color: "#333", fontSize: "0.72rem", letterSpacing: "3px", textAlign: "center", marginBottom: "2.5rem" }}>
             MEMBRESÍAS · CERTIFICACIONES · SEGUROS
           </div>
-          <div className="memberships-row flex flex-wrap justify-center items-center gap-4">
-            {[
-              { name: "BASC", sub: "Business Alliance" },
-              { name: "UNAPS", sub: "Agencias Privadas" },
-              { name: "Cámara de Comercio", sub: "El Salvador" },
-              { name: "MAPFRE", sub: "Seg. Colectivo · Resp. Civil" },
-              { name: "PNC #406", sub: "Policía Nacional Civil" },
-            ].map((m, i) => (
-              <div key={i} style={{
-                background: "#0b0b0b", border: "1px solid #1c1c1c",
-                borderRadius: "100px", padding: "12px 24px",
-                display: "flex", flexDirection: "column", alignItems: "center",
+          <div className="memberships-row flex flex-wrap justify-center items-center gap-6">
+            <div style={{
+                background: "linear-gradient(135deg, #111, #0a0700)",
+                border: "1px solid rgba(245,197,24,0.3)", borderRadius: "16px",
+                padding: "12px 24px", height: "75px", minWidth: "140px",
+                display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
                 transition: "all 0.3s ease", cursor: "default",
+                boxShadow: "0 4px 20px rgba(245,197,24,0.06)"
               }}
-                onMouseEnter={e => { e.currentTarget.style.borderColor = "rgba(245,197,24,0.4)"; e.currentTarget.style.background = "rgba(245,197,24,0.05)"; }}
-                onMouseLeave={e => { e.currentTarget.style.borderColor = "#1c1c1c"; e.currentTarget.style.background = "#0b0b0b"; }}
+              onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.borderColor = "rgba(245,197,24,0.6)"; }}
+              onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.borderColor = "rgba(245,197,24,0.3)"; }}
+            >
+              <div style={{ color: GOLD, fontWeight: "900", fontSize: "1.1rem" }}>PNC #406</div>
+              <div style={{ color: "#888", fontSize: "0.6rem", marginTop: "4px", letterSpacing: "1px" }}>AUTORIZACIÓN</div>
+            </div>
+            {[
+              { img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/b467792dd_8.png", alt: "BASC" },
+              { img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/50353a604_9.png", alt: "UNAPS" },
+              { img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/e2644239e_10.png", alt: "Cámara de Comercio" },
+              { img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/36e9b4682_11.png", alt: "MAPFRE" }
+            ].map((logo, i) => (
+              <div key={i} style={{
+                background: "white", borderRadius: "16px", padding: "12px 20px",
+                height: "75px", minWidth: "140px", display: "flex", alignItems: "center", justifyContent: "center",
+                transition: "all 0.3s ease", cursor: "default",
+                boxShadow: "0 4px 20px rgba(0,0,0,0.5)"
+              }}
+                onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.boxShadow = "0 8px 25px rgba(255,255,255,0.15)"; }}
+                onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 4px 20px rgba(0,0,0,0.5)"; }}
               >
-                <div style={{ color: GOLD, fontWeight: "800", fontSize: "0.95rem" }}>{m.name}</div>
-                <div style={{ color: "#444", fontSize: "0.65rem", marginTop: "2px" }}>{m.sub}</div>
+                <img src={logo.img} alt={logo.alt} style={{ maxWidth: "100px", maxHeight: "100%", objectFit: "contain" }} />
               </div>
             ))}
           </div>
