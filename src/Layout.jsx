@@ -48,12 +48,12 @@ export default function Layout({ children, currentPageName }) {
             <Link to={createPageUrl("Home")} className="flex items-center gap-3" style={{ textDecoration: "none" }}>
               <div
                 style={{
-                  width: "40px", height: "40px", background: GOLD,
-                  borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center",
+                  width: "45px", height: "45px",
+                  display: "flex", alignItems: "center", justifyContent: "center",
                   flexShrink: 0,
                 }}
               >
-                <ShieldCheck style={{ color: "#000", width: "20px", height: "20px" }} />
+                <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/9772c0dc2_4.png" alt="Grupo Fénix Logo" style={{ width: "100%", height: "100%", objectFit: "contain" }} />
               </div>
               <div>
                 <div style={{ color: GOLD, fontWeight: "900", fontSize: "1.05rem", letterSpacing: "2px", lineHeight: "1.1" }}>
@@ -115,8 +115,11 @@ export default function Layout({ children, currentPageName }) {
           >
             <X size={32} />
           </button>
-          <div style={{ color: GOLD, fontWeight: "900", fontSize: "1.4rem", letterSpacing: "3px" }}>
-            GRUPO FÉNIX
+          <div className="flex flex-col items-center gap-3">
+            <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/9772c0dc2_4.png" alt="Grupo Fénix Logo" style={{ width: "70px", height: "70px", objectFit: "contain" }} />
+            <div style={{ color: GOLD, fontWeight: "900", fontSize: "1.4rem", letterSpacing: "3px" }}>
+              GRUPO FÉNIX
+            </div>
           </div>
           {navLinks.map((link) => (
             <Link
@@ -148,8 +151,11 @@ export default function Layout({ children, currentPageName }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
             <div>
-              <div style={{ color: GOLD, fontWeight: "900", fontSize: "1.3rem", letterSpacing: "3px", marginBottom: "4px" }}>
-                GRUPO FÉNIX
+              <div className="flex items-center gap-3 mb-2">
+                <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/9772c0dc2_4.png" alt="Logo" style={{ width: "36px", height: "36px", objectFit: "contain" }} />
+                <div style={{ color: GOLD, fontWeight: "900", fontSize: "1.3rem", letterSpacing: "3px" }}>
+                  GRUPO FÉNIX
+                </div>
               </div>
               <div style={{ color: "#555", fontSize: "0.78rem", marginBottom: "1.25rem" }}>
                 Phoenix Security S.A. de C.V.
