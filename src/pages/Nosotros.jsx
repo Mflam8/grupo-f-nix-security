@@ -250,7 +250,7 @@ export default function Nosotros() {
                 display: "flex", alignItems: "center", justifyContent: "center"
               }}>
                 <img
-                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/a694eba3e_5.png"
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/3950a50a0_Diseosinttulo6.png"
                   alt="Logo Grupo Fénix"
                   style={{ width: "100%", height: "100%", objectFit: "cover", transform: "scale(1.2)" }}
                 />
