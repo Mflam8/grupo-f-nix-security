@@ -39,7 +39,7 @@ function useScrollReveal() {
     const els = document.querySelectorAll(".reveal");
     const observer = new IntersectionObserver(
       (entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("revealed"); }),
-      { threshold: 0.1 }
+      { threshold: 0, rootMargin: "100px" }
     );
     els.forEach(el => observer.observe(el));
     return () => observer.disconnect();
@@ -63,7 +63,7 @@ export default function Contacto() {
   }, []);
 
   return (
-    <div style={{ background: "#000", color: "white", overflowX: "hidden" }}>
+    <div style={{ background: "#000", color: "white" }}>
       <style>{`
         @keyframes fadeUp { from { opacity:0; transform:translateY(40px); } to { opacity:1; transform:translateY(0); } }
         @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
