@@ -239,57 +239,44 @@ export default function Nosotros() {
               </div>
             </div>
 
-            <div className="reveal" style={{ position: "relative" }}>
-              {/* Gold accent line */}
-              <div style={{
-                position: "absolute", top: "40px", left: "-20px",
-                width: "4px", height: "60%",
-                background: `linear-gradient(to bottom, transparent, ${GOLD}, transparent)`,
-                borderRadius: "2px",
-              }} />
+            <div className="reveal" style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
               <div style={{
                 borderRadius: "20px", overflow: "hidden",
                 border: "1px solid rgba(245,197,24,0.2)",
-                height: "480px", position: "relative",
+                height: "400px", position: "relative",
                 animation: "border-glow 4s ease infinite",
                 boxShadow: "0 40px 100px rgba(0,0,0,0.6)",
+                background: "#000",
+                display: "flex", alignItems: "center", justifyContent: "center"
               }}>
                 <img
                   src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/a694eba3e_5.png"
                   alt="Logo Grupo Fénix"
-                  style={{ width: "100%", height: "100%", objectFit: "contain", objectPosition: "center", padding: "2rem" }}
+                  style={{ width: "90%", height: "90%", objectFit: "contain" }}
                 />
-                <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 55%)" }} />
-                <div style={{
-                  position: "absolute", bottom: 0, left: 0, right: 0,
-                  padding: "2rem",
-                  display: "grid", gridTemplateColumns: "1fr 1fr 1fr 1fr",
-                  borderTop: "1px solid rgba(245,197,24,0.15)",
-                }}>
-                  {[
-                    { value: "406", label: "Lic. PNC" },
-                    { value: "24/7", label: "COS Activo" },
-                    { value: "3+", label: "Membresías" },
-                    { value: "100%", label: "Certificados" },
-                  ].map((s, i) => (
-                    <div key={i} style={{ textAlign: "center" }}>
-                      <div style={{ color: GOLD, fontWeight: "900", fontSize: "1.4rem", lineHeight: "1" }}>{s.value}</div>
-                      <div style={{ color: "#777", fontSize: "0.62rem", marginTop: "4px" }}>{s.label}</div>
-                    </div>
-                  ))}
-                </div>
               </div>
-              {/* Floating badge */}
-              <div style={{
-                position: "absolute", top: "30px", right: "-24px",
-                background: "linear-gradient(135deg, #111, #0a0700)",
-                border: "1px solid rgba(245,197,24,0.3)", borderRadius: "12px",
-                padding: "14px 20px", boxShadow: "0 8px 30px rgba(0,0,0,0.6)",
-                animation: "float 4s ease-in-out 1s infinite",
-                textAlign: "center",
-              }}>
-                <div style={{ color: GOLD, fontWeight: "900", fontSize: "1.4rem" }}>24/7</div>
-                <div style={{ color: "#666", fontSize: "0.62rem", letterSpacing: "1px" }}>CENTRO DE OPS</div>
+
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+                {[
+                  { value: "406", label: "Licencia PNC" },
+                  { value: "24/7", label: "COS Activo" },
+                  { value: "3+", label: "Membresías" },
+                  { value: "100%", label: "Certificados" },
+                ].map((s, i) => (
+                  <div key={i} style={{
+                    background: "linear-gradient(135deg, #111, #0a0700)",
+                    border: "1px solid rgba(245,197,24,0.15)", borderRadius: "16px",
+                    padding: "1.25rem", textAlign: "center",
+                    boxShadow: "0 8px 30px rgba(0,0,0,0.3)",
+                    transition: "all 0.3s ease",
+                  }}
+                    onMouseEnter={e => { e.currentTarget.style.borderColor = "rgba(245,197,24,0.4)"; e.currentTarget.style.transform = "translateY(-3px)"; }}
+                    onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(245,197,24,0.15)"; e.currentTarget.style.transform = "translateY(0)"; }}
+                  >
+                    <div style={{ color: GOLD, fontWeight: "900", fontSize: "1.6rem", lineHeight: "1" }}>{s.value}</div>
+                    <div style={{ color: "#777", fontSize: "0.75rem", marginTop: "6px", letterSpacing: "1px" }}>{s.label}</div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
