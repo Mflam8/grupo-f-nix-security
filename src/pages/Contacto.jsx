@@ -341,8 +341,11 @@ export default function Contacto() {
           }}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
-                <div style={{ color: GOLD, fontWeight: "900", fontSize: "1.5rem", letterSpacing: "3px", marginBottom: "4px" }}>
-                  GRUPO FÉNIX
+                <div className="flex items-center gap-4 mb-4">
+                  <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/9772c0dc2_4.png" alt="Logo" style={{ width: "45px", height: "45px", objectFit: "contain" }} />
+                  <div style={{ color: GOLD, fontWeight: "900", fontSize: "1.5rem", letterSpacing: "3px" }}>
+                    GRUPO FÉNIX
+                  </div>
                 </div>
                 <div style={{ color: "#444", fontSize: "0.78rem", marginBottom: "2rem", letterSpacing: "1px" }}>
                   Phoenix Security S.A. de C.V.
