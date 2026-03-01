@@ -177,13 +177,13 @@ export default function Servicios() {
           position: "absolute", inset: "-10%",
           backgroundImage: "url(https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/59aef11fc_foto_3_equipo_camion.jpg)",
           backgroundSize: "cover", backgroundPosition: "center",
-          filter: "brightness(0.18) contrast(1.1)",
+          filter: "brightness(0.38) contrast(1.1)",
           transform: `translate(${(mousePos.x - 0.5) * -15}px, ${(mousePos.y - 0.5) * -10}px)`,
           transition: "transform 0.8s ease-out",
         }} />
         <div style={{
           position: "absolute", inset: 0,
-          background: "linear-gradient(135deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.9) 100%)",
+          background: "linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.7) 100%)",
         }} />
         {/* Scanline */}
         <div style={{
