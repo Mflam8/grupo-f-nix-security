@@ -93,7 +93,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div style={{ background: "#000", color: "white", overflowX: "hidden" }}>
+    <div style={{ background: "#000", color: "white", overflowX: "clip" }}>
       <style>{`
         @keyframes fadeUp { from { opacity:0; transform:translateY(40px); } to { opacity:1; transform:translateY(0); } }
         @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
