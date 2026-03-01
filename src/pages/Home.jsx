@@ -117,12 +117,32 @@ export default function Home() {
         .reveal:nth-child(4) { transition-delay: 0.3s; }
         .reveal:nth-child(5) { transition-delay: 0.4s; }
         .reveal:nth-child(6) { transition-delay: 0.5s; }
+
+        @keyframes marquee { 
+          0% { transform: translateX(0); } 
+          100% { transform: translateX(-50%); } 
+        }
+        .marquee-track {
+          display: flex;
+          width: max-content;
+          animation: marquee 25s linear infinite;
+        }
+        .marquee-track:hover {
+          animation-play-state: paused;
+        }
+        .photo-strip-item {
+          width: 25vw;
+          height: 220px;
+          flex-shrink: 0;
+          border-right: 2px solid #000;
+        }
+
         /* ── Mobile optimizations ── */
         @media (max-width: 768px) {
           .hero-title { font-size: 3rem !important; }
           .hero-buttons { flex-direction: column !important; }
           .hero-buttons a, .hero-buttons .cta-btn { width: 100%; text-align: center; justify-content: center; }
-          .photo-strip-item { height: 160px !important; }
+          .photo-strip-item { width: 50vw !important; height: 160px !important; }
           .photo-strip-item .strip-label { font-size: 0.6rem !important; }
           .services-grid { grid-template-columns: 1fr !important; }
           .stats-grid { grid-template-columns: 1fr 1fr !important; gap: 1.5rem !important; }
@@ -135,7 +155,7 @@ export default function Home() {
           .why-checklist > div { padding: 10px 12px !important; }
         }
         @media (max-width: 480px) {
-          .photo-strip-item { height: 130px !important; }
+          .photo-strip-item { width: 85vw !important; height: 160px !important; }
           .hero-tag { font-size: 0.6rem !important; letter-spacing: 1.5px !important; }
         }
       `}</style>
@@ -363,17 +383,22 @@ export default function Home() {
           PHOTO STRIP
       ══════════════════════════════════════════ */}
       <section style={{ padding: "0", background: "#000", overflow: "hidden" }}>
-        <div style={{ display: "flex", gap: "2px" }}>
+        <div className="marquee-track">
           {[
             { img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/053d32d20_foto_2_guardia_carro.jpg", label: "Seguridad Física", icon: Shield },
-            { img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/343f05c5d_ChatGPTImageFeb28202605_52_55PM.png", label: "Vigilancia CCTV", icon: Camera },
             { img: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&q=80", label: "Ciberseguridad", icon: Lock },
+            { img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/343f05c5d_ChatGPTImageFeb28202605_52_55PM.png", label: "Vigilancia CCTV", icon: Camera },
+            { img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80", label: "Investigaciones", icon: Search },
+            // Duplicados para animación infinita
+            { img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/053d32d20_foto_2_guardia_carro.jpg", label: "Seguridad Física", icon: Shield },
+            { img: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&q=80", label: "Ciberseguridad", icon: Lock },
+            { img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/343f05c5d_ChatGPTImageFeb28202605_52_55PM.png", label: "Vigilancia CCTV", icon: Camera },
             { img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80", label: "Investigaciones", icon: Search },
           ].map((item, i) => {
             const Icon = item.icon;
             return (
               <div key={i} className="photo-strip-item" style={{
-                flex: 1, height: "220px", position: "relative", overflow: "hidden", cursor: "pointer",
+                position: "relative", overflow: "hidden", cursor: "pointer",
               }}>
                 <img src={item.img} alt={item.label}
                   style={{ width: "100%", height: "100%", objectFit: "cover", filter: "brightness(0.4) saturate(0.6)", transition: "all 0.5s ease" }} />
