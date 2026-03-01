@@ -175,7 +175,7 @@ export default function Servicios() {
       }}>
         <div style={{
           position: "absolute", inset: "-10%",
-          backgroundImage: "url(https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=1920&q=90)",
+          backgroundImage: "url(https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/59aef11fc_foto_3_equipo_camion.jpg)",
           backgroundSize: "cover", backgroundPosition: "center",
           filter: "brightness(0.18) contrast(1.1)",
           transform: `translate(${(mousePos.x - 0.5) * -15}px, ${(mousePos.y - 0.5) * -10}px)`,
@@ -369,7 +369,7 @@ export default function Servicios() {
       <section style={{ position: "relative", overflow: "hidden", padding: "8rem 0" }}>
         <div style={{
           position: "absolute", inset: 0,
-          backgroundImage: "url(https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=1800&q=80)",
+          backgroundImage: "url(https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/59aef11fc_foto_3_equipo_camion.jpg)",
           backgroundSize: "cover", backgroundPosition: "center",
           filter: "brightness(0.1)",
         }} />
