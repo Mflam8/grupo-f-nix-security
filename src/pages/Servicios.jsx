@@ -45,7 +45,7 @@ const services = [
     title: "Seguridad Electrónica",
     subtitle: "Tecnología avanzada de vigilancia y monitoreo",
     desc: "Instalación, monitoreo y mantenimiento de sistemas electrónicos de seguridad para todo tipo de sector.",
-    img: "https://images.unsplash.com/photo-1563453392212-326f5e854473?w=700&q=80",
+    img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/9d13f5d76_ChatGPTImageFeb28202605_52_55PM.png",
     items: [
       "Sistemas de Alarma contra robo, incendio y asalto",
       "CCTV – Circuito Cerrado de Televisión",
