@@ -395,30 +395,46 @@ export default function Nosotros() {
               Nuestros <span style={{ color: GOLD }}>Valores</span>
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {valores.map((v, i) => {
-              const Icon = v.icon;
-              return (
-                <div key={i} className="valor-card reveal" style={{
-                  background: "#0b0b0b", border: "1px solid #1c1c1c",
-                  borderRadius: "16px", padding: "2.5rem 1.75rem",
-                  textAlign: "center", boxShadow: "0 4px 30px rgba(0,0,0,0.5)",
-                }}>
-                  <div className="valor-icon" style={{
-                    width: "68px", height: "68px",
-                    background: "rgba(245,197,24,0.1)",
-                    borderRadius: "50%",
-                    display: "flex", alignItems: "center", justifyContent: "center",
-                    margin: "0 auto 1.5rem",
-                    border: "1px solid rgba(245,197,24,0.2)",
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="reveal">
+              <div style={{
+                borderRadius: "20px", overflow: "hidden",
+                border: "1px solid rgba(245,197,24,0.2)",
+                position: "relative",
+                boxShadow: "0 20px 60px rgba(0,0,0,0.5)"
+              }}>
+                <img 
+                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/a07163871_7.png" 
+                  alt="Valores Grupo Fénix" 
+                  style={{ width: "100%", height: "auto", display: "block" }} 
+                />
+              </div>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {valores.map((v, i) => {
+                const Icon = v.icon;
+                return (
+                  <div key={i} className="valor-card reveal" style={{
+                    background: "#0b0b0b", border: "1px solid #1c1c1c",
+                    borderRadius: "16px", padding: "2rem 1.5rem",
+                    textAlign: "center", boxShadow: "0 4px 30px rgba(0,0,0,0.5)",
                   }}>
-                    <Icon style={{ color: GOLD, width: "30px", height: "30px" }} />
+                    <div className="valor-icon" style={{
+                      width: "60px", height: "60px",
+                      background: "rgba(245,197,24,0.1)",
+                      borderRadius: "50%",
+                      display: "flex", alignItems: "center", justifyContent: "center",
+                      margin: "0 auto 1.5rem",
+                      border: "1px solid rgba(245,197,24,0.2)",
+                    }}>
+                      <Icon style={{ color: GOLD, width: "26px", height: "26px" }} />
+                    </div>
+                    <div style={{ color: "white", fontWeight: "800", fontSize: "1.05rem", marginBottom: "0.5rem" }}>{v.title}</div>
+                    <div style={{ color: "#666", fontSize: "0.85rem", lineHeight: "1.6" }}>{v.desc}</div>
                   </div>
-                  <div style={{ color: "white", fontWeight: "800", fontSize: "1.1rem", marginBottom: "0.75rem" }}>{v.title}</div>
-                  <div style={{ color: "#666", fontSize: "0.875rem", lineHeight: "1.7" }}>{v.desc}</div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
