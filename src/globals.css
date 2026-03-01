@@ -12,8 +12,8 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { background: #000; color: white; margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+html { scroll-behavior: smooth; overflow-x: hidden; max-width: 100vw; }
+body { background: #000; color: white; margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; overflow-x: hidden; max-width: 100vw; }
 
 .section-tag {
   display: inline-block;
