@@ -401,12 +401,13 @@ export default function Nosotros() {
                 borderRadius: "20px", overflow: "hidden",
                 border: "1px solid rgba(245,197,24,0.2)",
                 position: "relative",
-                boxShadow: "0 20px 60px rgba(0,0,0,0.5)"
+                boxShadow: "0 20px 60px rgba(0,0,0,0.5)",
+                aspectRatio: "1 / 1"
               }}>
                 <img 
                   src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/a07163871_7.png" 
                   alt="Valores Grupo Fénix" 
-                  style={{ width: "100%", height: "auto", display: "block" }} 
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} 
                 />
               </div>
             </div>
