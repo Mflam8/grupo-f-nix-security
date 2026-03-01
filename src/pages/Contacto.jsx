@@ -86,6 +86,7 @@ export default function Contacto() {
           .contacto-hero-title { font-size: 2.6rem !important; }
           .contacto-cta-buttons { flex-direction: column !important; align-items: stretch !important; }
           .contacto-cta-buttons a { width: 100% !important; justify-content: center !important; }
+          .contacto-hero-bg { background-position: right center !important; }
         }
         @media (max-width: 480px) {
           .contacto-hero-title { font-size: 2rem !important; }
@@ -98,7 +99,7 @@ export default function Contacto() {
         minHeight: "80vh", display: "flex", alignItems: "center",
         position: "relative", overflow: "hidden", paddingTop: "80px",
       }}>
-        <div style={{
+        <div className="contacto-hero-bg" style={{
           position: "absolute", inset: "-10%",
           backgroundImage: "url(https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/cebd91568_foto_1_pickup_guardia.jpg)",
           backgroundSize: "cover", backgroundPosition: "center",
