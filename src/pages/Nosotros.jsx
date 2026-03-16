@@ -542,6 +542,91 @@ export default function Nosotros() {
         </div>
       </section>
 
+      {/* ══ ARMAMENTO Y EQUIPO ══ */}
+      <section style={{ padding: "7rem 0", background: "#0b0b0b", position: "relative", overflow: "hidden" }}>
+        <div style={{
+          position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)",
+          width: "800px", height: "800px",
+          background: "radial-gradient(circle, rgba(245,197,24,0.04) 0%, transparent 65%)",
+          pointerEvents: "none",
+        }} />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            {/* Content */}
+            <div className="reveal">
+              <div style={{
+                display: "inline-block", background: "rgba(245,197,24,0.08)",
+                border: "1px solid rgba(245,197,24,0.2)", borderRadius: "100px",
+                padding: "6px 18px", marginBottom: "1.5rem",
+                color: GOLD, fontSize: "0.72rem", fontWeight: "700", letterSpacing: "2.5px",
+              }}>PERFIL Y DOTACIÓN</div>
+              <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: "900", color: "white", marginBottom: "1.5rem", lineHeight: "1.15" }}>
+                Armamento y <span style={{ color: GOLD }}>Equipo</span>
+              </h2>
+              <p style={{ color: "#aaa", lineHeight: "1.85", fontSize: "1rem", marginBottom: "2rem" }}>
+                El personal de seguridad está dotado del armamento y equipo necesarios para el desempeño de sus labores, garantizando una respuesta efectiva ante cualquier situación:
+              </p>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {[
+                  "Uniforme (Gris Oscuro para Agente, Blanca para Supervisor)",
+                  "Pantalón Negro",
+                  "Cinturón y funda con porta cartuchos",
+                  "Arma corta (Revólver calibre .38 mm)",
+                  "Arma larga (Escopeta calibre 12 mm)",
+                  "Munición de reserva",
+                  "Tonfa y Gas Pimienta",
+                  "Lámpara de mano",
+                  "Radio y Teléfono Celular"
+                ].map((item, i) => (
+                  <div key={i} className="checklist-item" style={{
+                    display: "flex", alignItems: "flex-start", gap: "10px",
+                    padding: "12px 14px", background: "rgba(245,197,24,0.03)", borderRadius: "8px",
+                    border: "1px solid rgba(245,197,24,0.06)",
+                  }}>
+                    <Shield style={{ color: GOLD, width: "16px", height: "16px", marginTop: "2px", flexShrink: 0 }} />
+                    <span style={{ color: "#bbb", fontSize: "0.85rem", lineHeight: "1.4" }}>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Image */}
+            <div className="reveal" style={{ position: "relative" }}>
+              <div style={{
+                borderRadius: "20px", overflow: "hidden",
+                border: "1px solid rgba(245,197,24,0.15)",
+                position: "relative",
+                boxShadow: "0 40px 100px rgba(0,0,0,0.6)",
+                background: "linear-gradient(135deg, #111, #050505)",
+                padding: "2rem",
+                display: "flex", justifyContent: "center", alignItems: "center",
+                minHeight: "450px"
+              }}>
+                <img
+                  src="https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/bff2d610f_563266CE-0887-40E6-92BD-219326A7C170.png"
+                  alt="Armamento y Equipo"
+                  style={{ width: "100%", height: "100%", objectFit: "contain", filter: "drop-shadow(0 20px 30px rgba(0,0,0,0.5))" }}
+                />
+              </div>
+              <div style={{
+                position: "absolute", top: "-20px", right: "-20px",
+                background: "linear-gradient(135deg, #111, #0a0700)",
+                border: "1px solid rgba(245,197,24,0.3)", borderRadius: "12px",
+                padding: "14px 20px", boxShadow: "0 8px 30px rgba(0,0,0,0.6)",
+                animation: "float 4s ease-in-out infinite",
+                textAlign: "center",
+              }}>
+                <div style={{ color: GOLD, fontWeight: "900", fontSize: "1.2rem" }}>100%</div>
+                <div style={{ color: "#666", fontSize: "0.62rem", letterSpacing: "1px" }}>EQUIPADOS</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
       {/* ══ CTA CINEMATIC ══ */}
       <section style={{ position: "relative", overflow: "hidden", padding: "8rem 0" }}>
         <div style={{
