@@ -605,7 +605,7 @@ export default function Nosotros() {
                 minHeight: "450px"
               }}>
                 <img
-                  src="https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/bff2d610f_563266CE-0887-40E6-92BD-219326A7C170.png"
+                  src="https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/27ccd740a_473F9191-80AA-4A4A-A875-CD4C1958BC7E.png"
                   alt="Armamento y Equipo"
                   style={{ width: "100%", height: "100%", objectFit: "contain", filter: "drop-shadow(0 20px 30px rgba(0,0,0,0.5))" }}
                 />
