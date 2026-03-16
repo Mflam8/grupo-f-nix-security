@@ -63,7 +63,6 @@ export default function Layout({ children, currentPageName }) {
                 <div style={{ color: GOLD, fontWeight: "900", fontSize: "1.05rem", letterSpacing: "2px", lineHeight: "1.1" }}>
                   GRUPO FÉNIX
                 </div>
-                <div style={{ color: "#555", fontSize: "0.58rem", letterSpacing: "2.5px" }}>SEGURIDAD INTEGRAL</div>
               </div>
             </Link>
 
