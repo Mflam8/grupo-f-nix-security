@@ -170,25 +170,20 @@ export default function EquipmentAndUniform() {
                       </div>
                     </div>
                   </div>
-                  <div className="order-1 lg:order-2 grid grid-cols-2 gap-4">
+                  <div className="order-1 lg:order-2">
                     <div style={{
-                      borderRadius: "16px", overflow: "hidden", border: "1px solid #1c1c1c",
-                      boxShadow: "0 4px 15px rgba(0,0,0,0.3)", aspectRatio: "3/4"
-                    }}>
-                      <img
-                        src="https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/50f61b04f_17.png"
-                        alt="Uniforme Manga Corta"
-                        style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                      />
-                    </div>
-                    <div style={{
-                      borderRadius: "16px", overflow: "hidden", border: "1px solid #1c1c1c",
-                      boxShadow: "0 4px 15px rgba(0,0,0,0.3)", aspectRatio: "3/4"
+                      borderRadius: "16px", overflow: "hidden",
+                      border: "1px solid rgba(245,197,24,0.15)",
+                      background: "linear-gradient(135deg, #111, #050505)",
+                      padding: "2rem",
+                      display: "flex", justifyContent: "center", alignItems: "center",
+                      minHeight: "350px",
+                      position: "relative"
                     }}>
                       <img
                         src="https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/46533bdb5_161.png"
-                        alt="Uniforme Manga Larga"
-                        style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                        alt="Uniforme Oficial"
+                        style={{ width: "100%", maxHeight: "350px", objectFit: "contain", filter: "drop-shadow(0 20px 30px rgba(0,0,0,0.5))" }}
                       />
                     </div>
                   </div>
