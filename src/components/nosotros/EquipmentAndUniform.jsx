@@ -1,16 +1,11 @@
 import React, { useState } from "react";
-import { Shield, ChevronDown, Shirt } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { Shield, Shirt } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const GOLD = "#F5C518";
 
 export default function EquipmentAndUniform() {
-  const [openSection, setOpenSection] = useState("armamento"); // "armamento" | "uniforme" | null
-
-  const toggleSection = (section) => {
-    setOpenSection(openSection === section ? null : section);
-  };
+  const [activeTab, setActiveTab] = useState("armamento");
 
   const gearList = [
     "Uniforme (Gris Oscuro para Agente, Blanca para Supervisor)",
@@ -29,7 +24,7 @@ export default function EquipmentAndUniform() {
       <div style={{
         position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)",
         width: "800px", height: "800px",
-        background: `radial-gradient(circle, rgba(245,197,24,0.04) 0%, transparent 65%)`,
+        background: "radial-gradient(circle, rgba(245,197,24,0.04) 0%, transparent 65%)",
         pointerEvents: "none",
       }} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -48,63 +43,91 @@ export default function EquipmentAndUniform() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-4 max-w-4xl mx-auto reveal">
-          {/* ARMAMENTO Y EQUIPO ACCORDION */}
-          <div className="border border-[#1c1c1c] rounded-2xl bg-[#0b0b0b] overflow-hidden transition-colors" style={{ borderColor: openSection === "armamento" ? "rgba(245,197,24,0.4)" : "#1c1c1c" }}>
-            <button 
-              onClick={() => toggleSection("armamento")}
-              className="w-full flex items-center justify-between p-6 bg-transparent hover:bg-[rgba(255,255,255,0.02)] transition-colors"
-            >
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[rgba(245,197,24,0.1)] border border-[rgba(245,197,24,0.2)] flex items-center justify-center">
-                  <Shield style={{ color: GOLD, width: "24px", height: "24px" }} />
-                </div>
-                <h3 className="text-xl font-bold text-white text-left">Armamento y Equipo</h3>
-              </div>
-              <ChevronDown className={cn("text-gray-400 transition-transform duration-300", openSection === "armamento" && "rotate-180")} />
-            </button>
-            <AnimatePresence>
-              {openSection === "armamento" && (
+        <div className="reveal max-w-5xl mx-auto">
+          {/* TABS */}
+          <div className="flex justify-center mb-10">
+            <div className="flex flex-wrap justify-center gap-2 p-1.5 bg-[#111] border border-[#1c1c1c] rounded-[2rem]">
+              <button
+                onClick={() => setActiveTab("armamento")}
+                className="flex items-center justify-center gap-2 px-6 py-3 rounded-full transition-all duration-300"
+                style={{
+                  background: activeTab === "armamento" ? "rgba(245,197,24,0.1)" : "transparent",
+                  color: activeTab === "armamento" ? GOLD : "#888",
+                  fontWeight: activeTab === "armamento" ? "700" : "500",
+                }}
+              >
+                <Shield size={18} /> <span className="text-sm sm:text-base">Armamento y Equipo</span>
+              </button>
+              <button
+                onClick={() => setActiveTab("uniforme")}
+                className="flex items-center justify-center gap-2 px-6 py-3 rounded-full transition-all duration-300"
+                style={{
+                  background: activeTab === "uniforme" ? "rgba(245,197,24,0.1)" : "transparent",
+                  color: activeTab === "uniforme" ? GOLD : "#888",
+                  fontWeight: activeTab === "uniforme" ? "700" : "500",
+                }}
+              >
+                <Shirt size={18} /> <span className="text-sm sm:text-base">Nuestro Uniforme</span>
+              </button>
+            </div>
+          </div>
+
+          {/* CONTENT */}
+          <div style={{
+            background: "#0b0b0b", border: "1px solid #1c1c1c",
+            borderRadius: "20px", padding: "clamp(1.5rem, 4vw, 3.5rem)",
+            boxShadow: "0 4px 30px rgba(0,0,0,0.5)",
+            minHeight: "500px",
+            display: "flex", flexDirection: "column", justifyContent: "center",
+            overflow: "hidden"
+          }}>
+            <AnimatePresence mode="wait">
+              {activeTab === "armamento" ? (
                 <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: "auto", opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  className="overflow-hidden"
+                  key="armamento"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: 20 }}
+                  transition={{ duration: 0.3 }}
+                  className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center"
                 >
-                  <div className="p-6 pt-0 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-                    <div>
-                      <p style={{ color: "#aaa", lineHeight: "1.85", fontSize: "0.95rem", marginBottom: "1.5rem" }}>
-                        El personal de seguridad está dotado del armamento y equipo necesarios para el desempeño de sus labores, garantizando una respuesta efectiva ante cualquier situación:
-                      </p>
-                      <div className="flex flex-col gap-2">
-                        {gearList.map((item, i) => (
-                          <div key={i} style={{
-                            display: "flex", alignItems: "flex-start", gap: "10px",
-                            padding: "10px 14px", background: "rgba(245,197,24,0.03)", borderRadius: "8px",
-                            border: "1px solid rgba(245,197,24,0.06)",
-                          }}>
-                            <Shield style={{ color: GOLD, width: "16px", height: "16px", marginTop: "2px", flexShrink: 0 }} />
-                            <span style={{ color: "#bbb", fontSize: "0.85rem", lineHeight: "1.4" }}>{item}</span>
-                          </div>
-                        ))}
-                      </div>
+                  <div className="order-2 lg:order-1">
+                    <h3 style={{ color: "white", fontSize: "1.4rem", fontWeight: "800", marginBottom: "1rem" }}>
+                      Armamento y <span style={{ color: GOLD }}>Equipo</span>
+                    </h3>
+                    <p style={{ color: "#888", lineHeight: "1.85", marginBottom: "1.5rem", fontSize: "0.95rem" }}>
+                      El personal de seguridad está dotado del armamento y equipo necesarios para el desempeño de sus labores, garantizando una respuesta efectiva ante cualquier situación:
+                    </p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      {gearList.map((item, i) => (
+                        <div key={i} style={{
+                          display: "flex", alignItems: "flex-start", gap: "10px",
+                          padding: "10px 14px", background: "rgba(245,197,24,0.03)", borderRadius: "8px",
+                          border: "1px solid rgba(245,197,24,0.06)",
+                        }}>
+                          <Shield style={{ color: GOLD, width: "16px", height: "16px", marginTop: "2px", flexShrink: 0 }} />
+                          <span style={{ color: "#bbb", fontSize: "0.85rem", lineHeight: "1.4" }}>{item}</span>
+                        </div>
+                      ))}
                     </div>
+                  </div>
+                  <div className="order-1 lg:order-2">
                     <div style={{
                       borderRadius: "16px", overflow: "hidden",
                       border: "1px solid rgba(245,197,24,0.15)",
                       background: "linear-gradient(135deg, #111, #050505)",
                       padding: "2rem",
                       display: "flex", justifyContent: "center", alignItems: "center",
-                      minHeight: "300px",
+                      minHeight: "350px",
                       position: "relative"
                     }}>
                       <img
                         src="https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/27ccd740a_473F9191-80AA-4A4A-A875-CD4C1958BC7E.png"
                         alt="Armamento y Equipo"
-                        style={{ width: "100%", height: "100%", objectFit: "contain", filter: "drop-shadow(0 20px 30px rgba(0,0,0,0.5))" }}
+                        style={{ width: "100%", maxHeight: "350px", objectFit: "contain", filter: "drop-shadow(0 20px 30px rgba(0,0,0,0.5))" }}
                       />
                       <div style={{
-                        position: "absolute", top: "10px", right: "10px",
+                        position: "absolute", top: "15px", right: "15px",
                         background: "linear-gradient(135deg, #111, #0a0700)",
                         border: "1px solid rgba(245,197,24,0.3)", borderRadius: "12px",
                         padding: "10px 14px", boxShadow: "0 8px 30px rgba(0,0,0,0.6)",
@@ -116,65 +139,63 @@ export default function EquipmentAndUniform() {
                     </div>
                   </div>
                 </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
-
-          {/* UNIFORME ACCORDION */}
-          <div className="border border-[#1c1c1c] rounded-2xl bg-[#0b0b0b] overflow-hidden transition-colors" style={{ borderColor: openSection === "uniforme" ? "rgba(245,197,24,0.4)" : "#1c1c1c" }}>
-            <button 
-              onClick={() => toggleSection("uniforme")}
-              className="w-full flex items-center justify-between p-6 bg-transparent hover:bg-[rgba(255,255,255,0.02)] transition-colors"
-            >
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-[rgba(245,197,24,0.1)] border border-[rgba(245,197,24,0.2)] flex items-center justify-center">
-                  <Shirt style={{ color: GOLD, width: "24px", height: "24px" }} />
-                </div>
-                <h3 className="text-xl font-bold text-white text-left">Nuestro Uniforme</h3>
-              </div>
-              <ChevronDown className={cn("text-gray-400 transition-transform duration-300", openSection === "uniforme" && "rotate-180")} />
-            </button>
-            <AnimatePresence>
-              {openSection === "uniforme" && (
+              ) : (
                 <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: "auto", opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  className="overflow-hidden"
+                  key="uniforme"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: 20 }}
+                  transition={{ duration: 0.3 }}
+                  className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center"
                 >
-                  <div className="p-6 pt-0">
-                    <p style={{ color: "#aaa", lineHeight: "1.85", fontSize: "0.95rem", marginBottom: "1.5rem" }}>
+                  <div className="order-2 lg:order-1">
+                    <h3 style={{ color: "white", fontSize: "1.4rem", fontWeight: "800", marginBottom: "1rem" }}>
+                      Nuestro <span style={{ color: GOLD }}>Uniforme</span>
+                    </h3>
+                    <p style={{ color: "#888", lineHeight: "1.85", marginBottom: "1.5rem", fontSize: "0.95rem" }}>
                       El uniforme consiste en camisa manga corta o manga larga según requerimiento o necesidad del servicio.
-                      Color Gris Oscuro para el Agente de Seguridad y Blanca para el Supervisor de Seguridad.
                     </p>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      <div style={{
-                        borderRadius: "16px", overflow: "hidden", border: "1px solid #1c1c1c",
-                        boxShadow: "0 4px 15px rgba(0,0,0,0.3)",
-                      }}>
-                        <img
-                          src="https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/50f61b04f_17.png"
-                          alt="Uniforme Manga Corta"
-                          style={{ width: "100%", height: "auto", objectFit: "cover" }}
-                        />
+                    <p style={{ color: "#888", lineHeight: "1.85", marginBottom: "2rem", fontSize: "0.95rem" }}>
+                      Se utiliza el <strong style={{ color: "white" }}>color Gris Oscuro</strong> para el Agente de Seguridad y <strong style={{ color: "white" }}>Blanca</strong> para el Supervisor de Seguridad.
+                    </p>
+                    <div style={{
+                      display: "inline-flex", alignItems: "center", gap: "12px",
+                      padding: "14px 20px", background: "rgba(245,197,24,0.05)", borderRadius: "12px",
+                      border: "1px solid rgba(245,197,24,0.15)",
+                    }}>
+                      <Shirt style={{ color: GOLD, width: "24px", height: "24px" }} />
+                      <div className="flex flex-col">
+                        <span style={{ color: "white", fontSize: "0.95rem", fontWeight: "700" }}>Identidad Corporativa</span>
+                        <span style={{ color: "#888", fontSize: "0.75rem" }}>Presencia profesional garantizada</span>
                       </div>
-                      <div style={{
-                        borderRadius: "16px", overflow: "hidden", border: "1px solid #1c1c1c",
-                        boxShadow: "0 4px 15px rgba(0,0,0,0.3)",
-                      }}>
-                        <img
-                          src="https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/46533bdb5_161.png"
-                          alt="Uniforme Manga Larga"
-                          style={{ width: "100%", height: "auto", objectFit: "cover" }}
-                        />
-                      </div>
+                    </div>
+                  </div>
+                  <div className="order-1 lg:order-2 grid grid-cols-2 gap-4">
+                    <div style={{
+                      borderRadius: "16px", overflow: "hidden", border: "1px solid #1c1c1c",
+                      boxShadow: "0 4px 15px rgba(0,0,0,0.3)", aspectRatio: "3/4"
+                    }}>
+                      <img
+                        src="https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/50f61b04f_17.png"
+                        alt="Uniforme Manga Corta"
+                        style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                      />
+                    </div>
+                    <div style={{
+                      borderRadius: "16px", overflow: "hidden", border: "1px solid #1c1c1c",
+                      boxShadow: "0 4px 15px rgba(0,0,0,0.3)", aspectRatio: "3/4"
+                    }}>
+                      <img
+                        src="https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/46533bdb5_161.png"
+                        alt="Uniforme Manga Larga"
+                        style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                      />
                     </div>
                   </div>
                 </motion.div>
               )}
             </AnimatePresence>
           </div>
-
         </div>
       </div>
     </section>
