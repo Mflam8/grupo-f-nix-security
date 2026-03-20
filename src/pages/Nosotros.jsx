@@ -542,6 +542,29 @@ export default function Nosotros() {
               </div>
             </div>
           </div>
+
+          {/* Compromiso Ético */}
+          <div className="reveal mt-8" style={{
+            background: "#0b0b0b", border: "1px solid #1c1c1c",
+            borderRadius: "20px", padding: "3rem",
+            boxShadow: "0 4px 30px rgba(0,0,0,0.5)",
+            transition: "all 0.4s ease",
+            textAlign: "center"
+          }}
+            onMouseEnter={e => { e.currentTarget.style.borderColor = "rgba(245,197,24,0.4)"; e.currentTarget.style.boxShadow = "0 20px 60px rgba(245,197,24,0.1)"; }}
+            onMouseLeave={e => { e.currentTarget.style.borderColor = "#1c1c1c"; e.currentTarget.style.boxShadow = "0 4px 30px rgba(0,0,0,0.5)"; }}
+          >
+            <div style={{ color: GOLD, fontWeight: "700", fontSize: "0.72rem", letterSpacing: "2.5px", marginBottom: "1.5rem" }}>CÓDIGO DE ÉTICA EMPRESARIAL</div>
+            <h3 style={{ color: "white", fontSize: "1.8rem", fontWeight: "800", marginBottom: "1rem" }}>
+              Nuestro <span style={{ color: GOLD }}>Compromiso Ético</span>
+            </h3>
+            <p style={{ color: "#888", lineHeight: "1.85", marginBottom: "2rem", fontSize: "1rem", maxWidth: "800px", margin: "0 auto 2rem" }}>
+              Nos comprometemos a proporcionar servicios de seguridad de alta calidad, respetando la ley y los derechos humanos. Actuamos con integridad, honradez y confidencialidad, y mantenemos una política estricta contra actividades ilícitas, corrupción y conflictos de interés.
+            </p>
+            <a href="https://media.base44.com/files/public/699dc69700a4d30f0cc60f12/0d70c0c3f_CODIGODEETICAPhoenixSecuritySAdeCV1.docx" download target="_blank" rel="noopener noreferrer" className="btn-secondary" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
+              📄 Descargar Código de Ética
+            </a>
+          </div>
         </div>
       </section>
 
