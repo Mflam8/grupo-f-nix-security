@@ -64,7 +64,7 @@ const services = [
 const stats = [
   { value: 95, suffix: "%", label: "Satisfacción del Cliente" },
   { value: 90, suffix: "%", label: "Eficacia de Capacitación" },
-  { value: "24/7", suffix: "", label: "Centro de Operaciones" },
+  { value: "24/7", suffix: "", label: "Horario de Operaciones" },
   { value: 406, suffix: "", label: "Autorización PNC" },
 ];
 
