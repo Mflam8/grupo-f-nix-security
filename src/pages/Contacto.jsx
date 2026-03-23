@@ -72,7 +72,7 @@ export default function Contacto() {
         }
       });
     };
-    window.addEventListener("mousemove", handleMouse);
+    window.addEventListener("mousemove", handleMouse, { passive: true });
     return () => {
       window.removeEventListener("mousemove", handleMouse);
       cancelAnimationFrame(animationFrameId);

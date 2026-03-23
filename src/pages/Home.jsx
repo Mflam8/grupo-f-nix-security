@@ -106,7 +106,7 @@ export default function Home() {
         }
       });
     };
-    window.addEventListener("mousemove", handleMouse);
+    window.addEventListener("mousemove", handleMouse, { passive: true });
     return () => {
       window.removeEventListener("mousemove", handleMouse);
       cancelAnimationFrame(animationFrameId);
@@ -325,6 +325,7 @@ export default function Home() {
                   src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/304c8dc0b_1.png"
                   alt="Equipo Grupo Fénix"
                   loading="eager"
+                  fetchpriority="high"
                   decoding="async"
                   style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}
                 />

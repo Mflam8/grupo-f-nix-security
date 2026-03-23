@@ -19,8 +19,15 @@ export default function Layout({ children, currentPageName }) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setIsScrolled(window.scrollY > 60);
-    window.addEventListener("scroll", onScroll);
+    let lastState = false;
+    const onScroll = () => {
+      const isScrolledNow = window.scrollY > 60;
+      if (isScrolledNow !== lastState) {
+        setIsScrolled(isScrolledNow);
+        lastState = isScrolledNow;
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -57,7 +64,7 @@ export default function Layout({ children, currentPageName }) {
                   flexShrink: 0,
                 }}
               >
-                <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/3950a50a0_Diseosinttulo6.png" alt="Grupo Fénix Logo" style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+                <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/3950a50a0_Diseosinttulo6.png" alt="Grupo Fénix Logo" fetchpriority="high" style={{ width: "100%", height: "100%", objectFit: "contain" }} />
               </div>
               <div>
                 <div style={{ color: GOLD, fontWeight: "900", fontSize: "1.05rem", letterSpacing: "2px", lineHeight: "1.1" }}>
