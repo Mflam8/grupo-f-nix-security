@@ -23,13 +23,18 @@ function AnimatedCounter({ target, suffix = "", duration = 2000 }) {
         const isNum = !isNaN(parseInt(target));
         if (!isNum) { setCount(target); return; }
         const end = parseInt(target);
-        const step = Math.ceil(end / (duration / 16));
-        let cur = 0;
-        const timer = setInterval(() => {
-          cur = Math.min(cur + step, end);
-          setCount(cur);
-          if (cur >= end) clearInterval(timer);
-        }, 16);
+        let startTime = null;
+        const animate = (currentTime) => {
+          if (!startTime) startTime = currentTime;
+          const progress = Math.min((currentTime - startTime) / duration, 1);
+          setCount(Math.floor(progress * end));
+          if (progress < 1) {
+            requestAnimationFrame(animate);
+          } else {
+            setCount(end);
+          }
+        };
+        requestAnimationFrame(animate);
       }
     }, { threshold: 0.5 });
     if (ref.current) observer.observe(ref.current);
