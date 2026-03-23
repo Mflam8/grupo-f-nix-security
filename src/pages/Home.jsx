@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import {
   ShieldCheck, Shield, Camera, Lock, Search, GraduationCap,
-  Clock, Globe, Award, Users, UserCheck, CheckCircle, ChevronRight, MessageCircle, ArrowDown,
+  Clock, Globe, Award, Users, UserCheck, Truck, CheckCircle, ChevronRight, MessageCircle, ArrowDown,
 } from "lucide-react";
 
 const GOLD = "#F5C518";
@@ -54,13 +54,14 @@ function useScrollReveal() {
 
 const services = [
   { icon: ShieldCheck, title: "Asesoría Técnica", desc: "Análisis de riesgos, políticas de seguridad e implementación de sistemas integrales.", color: "rgba(245,197,24,0.08)" },
-  { icon: Shield, title: "Seguridad Armada", desc: "Protección de instalaciones residenciales, comerciales e industriales y transporte de valores.", color: "rgba(245,197,24,0.06)" },
+  { icon: Shield, title: "Seguridad Física de Instalaciones", desc: "Protección de personas, activos y propiedad privada mediante barreras y vigilancia.", color: "rgba(245,197,24,0.06)" },
   { icon: Camera, title: "Seguridad Electrónica", desc: "CCTV, alarmas, control de acceso, televigilancia y detección de incendios.", color: "rgba(245,197,24,0.08)" },
   { icon: Lock, title: "Ciberseguridad", desc: "Pentesting, gestión de vulnerabilidades, seguridad en la nube y protección de datos.", color: "rgba(245,197,24,0.06)" },
   { icon: Search, title: "Investigaciones & VSA", desc: "Investigaciones empresariales y laborales con tecnología VSA de 96.12% de certeza.", color: "rgba(245,197,24,0.08)" },
   { icon: GraduationCap, title: "Adiestramiento", desc: "Capacitación en seguridad, manejo de crisis y formación de personal.", color: "rgba(245,197,24,0.06)" },
   { icon: Users, title: "Protección de Personas Importantes", desc: "Salvaguarda integral para altos ejecutivos y personas de relevancia pública.", color: "rgba(245,197,24,0.08)" },
   { icon: UserCheck, title: "Agente Bouncer", desc: "Control de accesos, manejo de multitudes y resolución de conflictos en eventos.", color: "rgba(245,197,24,0.06)" },
+  { icon: Truck, title: "Seguridad Logística", desc: "Protección al transporte, custodio en cabina, patrullas armadas y marchamos electrónicos.", color: "rgba(245,197,24,0.08)" },
 ];
 
 const stats = [

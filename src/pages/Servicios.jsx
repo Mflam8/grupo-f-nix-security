@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
-import { ShieldCheck, Shield, Camera, Lock, Search, GraduationCap, CheckCircle, ChevronRight, MessageCircle, ArrowDown, Users, UserCheck } from "lucide-react";
+import { ShieldCheck, Shield, Camera, Lock, Search, GraduationCap, CheckCircle, ChevronRight, MessageCircle, ArrowDown, Users, UserCheck, Truck } from "lucide-react";
 
 const GOLD = "#F5C518";
 const WHATSAPP_URL =
@@ -24,16 +24,17 @@ const services = [
   },
   {
     icon: Shield, num: "02",
-    title: "Seguridad Armada y No Armada",
-    subtitle: "Protección física integral de instalaciones y transporte",
-    desc: "Personal especializado para la protección de instalaciones y transporte en todo el territorio nacional.",
+    title: "Seguridad Física de Instalaciones",
+    subtitle: "Protección de personas, activos y propiedad privada",
+    desc: "Personal de seguridad, barreras y vigilancia para disuadir, detectar y frenar intrusos, garantizando la continuidad operativa de su empresa.",
     img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/060e40703_foto_2_guardia_carro.jpg",
     items: [
-      "Seguridad Comercial, Industrial, Bancaria y Residencial",
-      "Custodio en Cabina y Patrullas en Ruta",
-      "Controles de acceso y rondas perimetrales",
-      "Supervisión diurna y nocturna",
-      "Patrulla de reacción motorizada en emergencias",
+      "Seguridad Comercial, Industrial, Bancaria y Residencial.",
+      "Seguridad Perimetral, Interna y en Zonas Sensibles.",
+      "Controles de acceso y personal de seguridad (Guardias).",
+      "Integración con sistemas de Detección, Intrusión y CCTV.",
+      "Sistemas de Reacción a Emergencias y Protección contra Incendios.",
+      "Estudios de Seguridad y Gestión de Riesgos.",
     ],
   },
   {
@@ -143,6 +144,22 @@ const services = [
       "Manejo de multitudes y herramientas digitales de Control de Acceso.",
       "Actuación en situaciones de crisis y asistencia en evacuación.",
       "Desescalada de conflictos y uso proporcionado de la fuerza.",
+    ],
+  },
+  {
+    icon: Truck, num: "09",
+    title: "Seguridad Logística y al Transporte",
+    subtitle: "Prevención de robos y protección de mercadería en tránsito",
+    desc: "Sistema integrado para proteger unidades de transporte, carga y tripulación desde el punto de salida hasta la llegada mediante tecnología y personal capacitado.",
+    img: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=700&q=80",
+    items: [
+      "Custodio en Cabina: Vigilancia de carga, reportes y verificación de protocolos.",
+      "Patrulla Armada para convoyes con capacidad de reacción rápida.",
+      "Marchamo Electrónico Solar: Monitoreo GPS 24/7 y alertas de apertura no autorizada.",
+      "Planificación y coordinación de rutas seguras con puntos de chequeo.",
+      "Certificación de operadores, pruebas de Alcotest y evaluación de salud.",
+      "Reconocimiento de rutas y patrullas de avanzada para cargas de alto riesgo.",
+      "Estudios de seguridad, análisis de incidencia delincuencial y enlaces interinstitucionales.",
     ],
   },
 ];
