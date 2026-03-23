@@ -179,8 +179,6 @@ function useScrollReveal() {
 export default function Servicios() {
   useScrollReveal();
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const [editMode, setEditMode] = useState(false);
-  const [imagePositions, setImagePositions] = useState({});
 
   useEffect(() => {
     document.title = "Servicios de Seguridad Integral | Grupo Fénix";
@@ -279,23 +277,7 @@ export default function Servicios() {
             <span style={{ color: GOLD, textShadow: "0 0 40px rgba(245,197,24,0.4)" }}>Seguridad Integral</span>
           </h1>
 
-          <button 
-            onClick={() => setEditMode(!editMode)}
-            style={{ 
-              background: editMode ? "#ff4444" : GOLD, 
-              color: editMode ? "white" : "#000", 
-              fontWeight: "800", 
-              padding: "10px 20px", 
-              borderRadius: "8px", 
-              marginBottom: "2rem",
-              border: "none",
-              cursor: "pointer",
-              animation: "fadeUp 0.9s ease 0.4s both",
-              boxShadow: "0 4px 15px rgba(0,0,0,0.3)"
-            }}
-          >
-            {editMode ? "Cerrar Modo Edición" : "Ajustar Imágenes"}
-          </button>
+
 
           <p style={{
             fontSize: "1.1rem", color: "#bbb", lineHeight: "1.85",
@@ -382,11 +364,12 @@ export default function Servicios() {
             {services.map((s, i) => {
               const Icon = s.icon;
               const isEven = i % 2 === 0;
-              
-              const defaultX = s.num === "06" ? 100 : 50;
-              const defaultY = (s.num === "09" || s.num === "07") ? 100 : 50;
-              const posX = imagePositions[s.num]?.x ?? defaultX;
-              const posY = imagePositions[s.num]?.y ?? defaultY;
+
+              let objPos = "center";
+              if (s.num === "06") objPos = "100% 50%";
+              else if (s.num === "07") objPos = "66% 100%";
+              else if (s.num === "08") objPos = "24% 50%";
+              else if (s.num === "09") objPos = "100% 100%";
 
               return (
                 <div key={i} className="service-row reveal" style={{
@@ -403,22 +386,8 @@ export default function Servicios() {
                       minHeight: "250px",
                     }}>
                       <img src={s.img} alt={s.title} className="service-img"
-                        style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: `${posX}% ${posY}%`, filter: "brightness(0.55)" }}
+                        style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: objPos, filter: "brightness(0.55)" }}
                       />
-                      {editMode && (
-                        <div style={{ position: "absolute", top: 10, left: 10, right: 10, zIndex: 50, background: "rgba(0,0,0,0.85)", padding: "12px", borderRadius: "8px", border: "1px solid #333", color: "white" }}>
-                          <div style={{ fontSize: "0.8rem", marginBottom: "8px", fontWeight: "bold" }}>Ajustar Imagen {s.num}</div>
-                          <label style={{ display: "flex", alignItems: "center", gap: "10px", fontSize: "0.75rem", marginBottom: "8px" }}>
-                            <span>X: {posX}%</span>
-                            <input type="range" min="0" max="100" value={posX} onChange={e => setImagePositions({...imagePositions, [s.num]: { ...imagePositions[s.num], x: e.target.value, y: posY }})} style={{ flex: 1 }} />
-                          </label>
-                          <label style={{ display: "flex", alignItems: "center", gap: "10px", fontSize: "0.75rem" }}>
-                            <span>Y: {posY}%</span>
-                            <input type="range" min="0" max="100" value={posY} onChange={e => setImagePositions({...imagePositions, [s.num]: { ...imagePositions[s.num], x: posX, y: e.target.value }})} style={{ flex: 1 }} />
-                          </label>
-                          <div style={{ fontSize: "0.65rem", marginTop: "8px", color: "#F5C518" }}>Envíame un mensaje con estos valores para guardarlos permanentemente.</div>
-                        </div>
-                      )}
                       <div className="hidden lg:block" style={{ position: "absolute", inset: 0, background: isEven ? "linear-gradient(to right, transparent 60%, #0b0b0b 100%)" : "linear-gradient(to left, transparent 60%, #0b0b0b 100%)" }} />
                       <div className="lg:hidden" style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, transparent 40%, #0b0b0b 100%)" }} />
                       {/* Number overlay */}
