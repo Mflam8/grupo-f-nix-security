@@ -54,11 +54,12 @@ function useScrollReveal() {
 
 const services = [
   { icon: ShieldCheck, title: "Asesoría Técnica", desc: "Análisis de riesgos, políticas de seguridad e implementación de sistemas integrales.", color: "rgba(245,197,24,0.08)" },
-  { icon: Shield, title: "Seguridad Armada", desc: "Protección de instalaciones, escoltas VIP, eventos y transporte de valores.", color: "rgba(245,197,24,0.06)" },
+  { icon: Shield, title: "Seguridad Armada", desc: "Protección de instalaciones residenciales, comerciales e industriales y transporte de valores.", color: "rgba(245,197,24,0.06)" },
   { icon: Camera, title: "Seguridad Electrónica", desc: "CCTV, alarmas, control de acceso, televigilancia y detección de incendios.", color: "rgba(245,197,24,0.08)" },
   { icon: Lock, title: "Ciberseguridad", desc: "Pentesting, gestión de vulnerabilidades, seguridad en la nube y protección de datos.", color: "rgba(245,197,24,0.06)" },
   { icon: Search, title: "Investigaciones & VSA", desc: "Investigaciones empresariales y laborales con tecnología VSA de 96.12% de certeza.", color: "rgba(245,197,24,0.08)" },
-  { icon: GraduationCap, title: "Adiestramiento", desc: "Capacitación en seguridad, manejo de crisis, autoprotección y formación de personal.", color: "rgba(245,197,24,0.06)" },
+  { icon: GraduationCap, title: "Adiestramiento", desc: "Capacitación en seguridad, manejo de crisis y formación de personal.", color: "rgba(245,197,24,0.06)" },
+  { icon: Users, title: "Protección de Personas", desc: "Protección de personas, escoltas VIP, seguridad de eventos y prevención de delitos.", color: "rgba(245,197,24,0.08)" },
 ];
 
 const stats = [

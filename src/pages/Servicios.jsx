@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
-import { ShieldCheck, Shield, Camera, Lock, Search, GraduationCap, CheckCircle, ChevronRight, MessageCircle, ArrowDown } from "lucide-react";
+import { ShieldCheck, Shield, Camera, Lock, Search, GraduationCap, CheckCircle, ChevronRight, MessageCircle, ArrowDown, Users } from "lucide-react";
 
 const GOLD = "#F5C518";
 const WHATSAPP_URL =
@@ -20,24 +20,20 @@ const services = [
       "Desarrollo de Políticas, Normas y Procedimientos",
       "Análisis e Investigación de Incidentes",
       "Consultoría permanente y auditorías de seguridad",
-      "Estudios de seguridad y análisis confidenciales",
     ],
   },
   {
     icon: Shield, num: "02",
     title: "Seguridad Armada y No Armada",
-    subtitle: "Protección física integral de personas e instalaciones",
-    desc: "Personal especializado para la protección de instalaciones, personas y transporte en todo el territorio nacional.",
+    subtitle: "Protección física integral de instalaciones y transporte",
+    desc: "Personal especializado para la protección de instalaciones y transporte en todo el territorio nacional.",
     img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/060e40703_foto_2_guardia_carro.jpg",
     items: [
       "Seguridad Comercial, Industrial, Bancaria y Residencial",
-      "Protección de personas VIP, escoltas y Alta Seguridad",
       "Custodio en Cabina y Patrullas en Ruta",
-      "Seguridad de Eventos",
       "Controles de acceso y rondas perimetrales",
       "Supervisión diurna y nocturna",
       "Patrulla de reacción motorizada en emergencias",
-      "Contravigilancia, seguimiento y prevención de delitos",
     ],
   },
   {
@@ -87,7 +83,6 @@ const services = [
       "Extorsiones, inteligencia y contrainteligencia",
       "VSA – Análisis de Estrés de Voz (96.12% de certeza)",
       "Evaluación Pre-Empleo y de Confiabilidad",
-      "Antecedentes personales, laborales, penales y policiales",
       "Visitas Domiciliarias y Estudios Socioeconómicos",
     ],
   },
@@ -106,14 +101,32 @@ const services = [
       "Planes de evacuación y simulacros",
       "Seguridad de puertos, aeropuertos y transportes",
       "Análisis estratégico de pre-empleo",
-      "Adiestramiento en Polígono de Tiro",
       "Adiestramiento en Uso de Armas No Letales",
       "Capacitación de Servicio al Cliente y Normas de Cortesía",
       "Capacitación de Trabajo en Equipo y Taller de Cuerdas",
-      "Manejo Defensivo y Evasivo",
       "Charlas Inclusión Social y Acoso Laboral y Sexual",
       "Charla de Derechos Humanos",
       "Manejo de Clientes Difíciles",
+    ],
+  },
+  {
+    icon: Users, num: "07",
+    title: "Protección de Personas",
+    subtitle: "Seguridad y escoltas VIP",
+    desc: "Servicios especializados de protección a personas, escoltas VIP y seguridad de eventos.",
+    img: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=700&q=80",
+    items: [
+      "Protección de personas, escoltas VIP y Alta Seguridad.",
+      "Seguridad de Eventos.",
+      "Prevención de Delitos.",
+      "Contravigilancia y Seguimiento.",
+      "Manejo Defensivo y Ofensivo.",
+      "Entrenamiento Uso Armas de Fuego.",
+      "Revisión de Antecedentes.",
+      "Atención y Asistencia Permanente.",
+      "Análisis Estratégico y Evaluación de Amenazas.",
+      "Capacitación de Empleados y Viajeros.",
+      "Asesorías en Prevención de Riesgos. Estudios de Seguridad.",
     ],
   },
 ];
