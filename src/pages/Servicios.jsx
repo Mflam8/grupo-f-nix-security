@@ -401,7 +401,7 @@ export default function Servicios() {
                       gridRow: "1",
                       minHeight: "250px",
                     }}>
-                      <img src={s.img} alt={s.title} className="service-img"
+                      <img src={s.img} alt={s.title} className="service-img" loading="lazy" decoding="async"
                         style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: objPos, filter: "brightness(0.55)" }}
                       />
                       <div className="hidden lg:block" style={{ position: "absolute", inset: 0, background: isEven ? "linear-gradient(to right, transparent 60%, #0b0b0b 100%)" : "linear-gradient(to left, transparent 60%, #0b0b0b 100%)" }} />

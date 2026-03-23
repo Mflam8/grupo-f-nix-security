@@ -324,6 +324,8 @@ export default function Home() {
                 <img
                   src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/304c8dc0b_1.png"
                   alt="Equipo Grupo Fénix"
+                  loading="eager"
+                  decoding="async"
                   style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}
                 />
                 <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 55%)" }} />
@@ -434,7 +436,7 @@ export default function Home() {
               <div key={i} className="photo-strip-item" style={{
                 position: "relative", overflow: "hidden", cursor: "pointer",
               }}>
-                <img src={item.img} alt={item.label}
+                <img src={item.img} alt={item.label} loading="lazy" decoding="async"
                   style={{ width: "100%", height: "100%", objectFit: "cover", filter: "brightness(0.4) saturate(0.6)", transition: "all 0.5s ease" }} />
                 <div style={{
                   position: "absolute", inset: 0,
@@ -537,6 +539,8 @@ export default function Home() {
                 <img
                   src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/67592f8da_2.png"
                   alt="Seguridad que inspira confianza"
+                  loading="lazy"
+                  decoding="async"
                   style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", filter: "brightness(0.9)" }}
                 />
                 <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.3) 0%, transparent 50%)" }} />

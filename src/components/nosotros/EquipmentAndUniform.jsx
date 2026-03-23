@@ -124,6 +124,8 @@ export default function EquipmentAndUniform() {
                       <img
                         src="https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/27ccd740a_473F9191-80AA-4A4A-A875-CD4C1958BC7E.png"
                         alt="Armamento y Equipo"
+                        loading="lazy"
+                        decoding="async"
                         style={{ width: "100%", maxHeight: "350px", objectFit: "contain", filter: "drop-shadow(0 20px 30px rgba(0,0,0,0.5))" }}
                       />
                       <div style={{
@@ -183,6 +185,8 @@ export default function EquipmentAndUniform() {
                       <img
                         src="https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/46533bdb5_161.png"
                         alt="Uniforme Oficial"
+                        loading="lazy"
+                        decoding="async"
                         style={{ width: "100%", maxHeight: "350px", objectFit: "contain", filter: "drop-shadow(0 20px 30px rgba(0,0,0,0.5))" }}
                       />
                     </div>
