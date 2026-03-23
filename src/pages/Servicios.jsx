@@ -115,7 +115,7 @@ const services = [
     title: "Protección de Personas Importantes",
     subtitle: "Seguridad y escoltas para altos ejecutivos",
     desc: "Estrategias y agentes especializados destinados a salvaguardar la integridad física, psíquica y la libertad de personas de alto riesgo o relevancia pública. Abarca protección en movimientos a pie, vehiculares y eventos.",
-    img: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=700&q=80",
+    img: "https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/446536a4f_WhatsAppImage2026-03-20at55322PM.jpg",
     items: [
       "Protección de personas, escoltas VIP y Alta Seguridad.",
       "Seguridad de Eventos.",
@@ -135,7 +135,7 @@ const services = [
     title: "Agente de Seguridad Bouncer",
     subtitle: "Control de accesos y manejo de multitudes",
     desc: "Personal entrenado para la disuasión, verificación de identidad y mantenimiento del orden con un trato amable pero firme en bares y eventos.",
-    img: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=700&q=80",
+    img: "https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/530cbdf1e_WhatsAppImage2026-03-20at55322PM2.jpg",
     items: [
       "Verificación de identificaciones (IDs) y control de ingreso.",
       "Prevención de incidentes, riñas, tumultos y accesos no autorizados.",
@@ -151,7 +151,7 @@ const services = [
     title: "Seguridad Logística y al Transporte",
     subtitle: "Prevención de robos y protección de mercadería en tránsito",
     desc: "Sistema integrado para proteger unidades de transporte, carga y tripulación desde el punto de salida hasta la llegada mediante tecnología y personal capacitado.",
-    img: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=700&q=80",
+    img: "https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/e0efa0396_WhatsAppImage2026-03-20at55322PM1.jpg",
     items: [
       "Custodio en Cabina: Vigilancia de carga, reportes y verificación de protocolos.",
       "Patrulla Armada para convoyes con capacidad de reacción rápida.",
