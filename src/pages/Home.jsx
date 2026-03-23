@@ -483,9 +483,9 @@ export default function Home() {
                   </div>
                   <h3 style={{ color: "white", fontWeight: "800", fontSize: "1.05rem", marginBottom: "0.75rem" }}>{s.title}</h3>
                   <p style={{ color: "#666", fontSize: "0.875rem", lineHeight: "1.8" }}>{s.desc}</p>
-                  <div style={{ marginTop: "1.5rem", display: "flex", alignItems: "center", gap: "6px", color: GOLD, fontSize: "0.8rem", fontWeight: "600" }}>
+                  <Link to={createPageUrl("Servicios")} style={{ marginTop: "1.5rem", display: "inline-flex", alignItems: "center", gap: "6px", color: GOLD, fontSize: "0.8rem", fontWeight: "600", textDecoration: "none" }}>
                     Ver más <ChevronRight size={14} />
-                  </div>
+                  </Link>
                 </div>
               );
             })}
