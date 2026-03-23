@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
-import { ShieldCheck, Shield, Camera, Lock, Search, GraduationCap, CheckCircle, ChevronRight, MessageCircle, ArrowDown, Users } from "lucide-react";
+import { ShieldCheck, Shield, Camera, Lock, Search, GraduationCap, CheckCircle, ChevronRight, MessageCircle, ArrowDown, Users, UserCheck } from "lucide-react";
 
 const GOLD = "#F5C518";
 const WHATSAPP_URL =
@@ -111,9 +111,9 @@ const services = [
   },
   {
     icon: Users, num: "07",
-    title: "Protección de Personas",
-    subtitle: "Seguridad y escoltas VIP",
-    desc: "Servicios especializados de protección a personas, escoltas VIP y seguridad de eventos.",
+    title: "Protección de Personas Importantes",
+    subtitle: "Seguridad y escoltas para altos ejecutivos",
+    desc: "Estrategias y agentes especializados destinados a salvaguardar la integridad física, psíquica y la libertad de personas de alto riesgo o relevancia pública. Abarca protección en movimientos a pie, vehiculares y eventos.",
     img: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=700&q=80",
     items: [
       "Protección de personas, escoltas VIP y Alta Seguridad.",
@@ -127,6 +127,22 @@ const services = [
       "Análisis Estratégico y Evaluación de Amenazas.",
       "Capacitación de Empleados y Viajeros.",
       "Asesorías en Prevención de Riesgos. Estudios de Seguridad.",
+    ],
+  },
+  {
+    icon: UserCheck, num: "08",
+    title: "Agente de Seguridad Bouncer",
+    subtitle: "Control de accesos y manejo de multitudes",
+    desc: "Personal entrenado para la disuasión, verificación de identidad y mantenimiento del orden con un trato amable pero firme en bares y eventos.",
+    img: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=700&q=80",
+    items: [
+      "Verificación de identificaciones (IDs) y control de ingreso.",
+      "Prevención de incidentes, riñas, tumultos y accesos no autorizados.",
+      "Patrullaje y vigilancia del comportamiento de los clientes.",
+      "Neutralización y desalojo con tacto de personas problemáticas.",
+      "Manejo de multitudes y herramientas digitales de Control de Acceso.",
+      "Actuación en situaciones de crisis y asistencia en evacuación.",
+      "Desescalada de conflictos y uso proporcionado de la fuerza.",
     ],
   },
 ];
