@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { MapPin, Phone, Clock, Globe, MessageCircle, Shield, CheckCircle, ChevronRight, ArrowDown } from "lucide-react";
 
 const GOLD = "#F5C518";
@@ -38,7 +38,12 @@ function useScrollReveal() {
   useEffect(() => {
     const els = document.querySelectorAll(".reveal");
     const observer = new IntersectionObserver(
-      (entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("revealed"); }),
+      (entries, obs) => entries.forEach(e => { 
+        if (e.isIntersecting) {
+          e.target.classList.add("revealed");
+          obs.unobserve(e.target);
+        }
+      }),
       { threshold: 0, rootMargin: "100px" }
     );
     els.forEach(el => observer.observe(el));
@@ -48,18 +53,30 @@ function useScrollReveal() {
 
 export default function Contacto() {
   useScrollReveal();
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const bgRef = useRef(null);
 
   useEffect(() => {
     document.title = "Contacto | Grupo Fénix – Seguridad Integral El Salvador";
   }, []);
 
   useEffect(() => {
+    let animationFrameId;
     const handleMouse = (e) => {
-      setMousePos({ x: e.clientX / window.innerWidth, y: e.clientY / window.innerHeight });
+      if (!bgRef.current) return;
+      const x = e.clientX / window.innerWidth;
+      const y = e.clientY / window.innerHeight;
+      cancelAnimationFrame(animationFrameId);
+      animationFrameId = requestAnimationFrame(() => {
+        if (bgRef.current) {
+          bgRef.current.style.transform = `translate(${(x - 0.5) * -15}px, ${(y - 0.5) * -10}px)`;
+        }
+      });
     };
     window.addEventListener("mousemove", handleMouse);
-    return () => window.removeEventListener("mousemove", handleMouse);
+    return () => {
+      window.removeEventListener("mousemove", handleMouse);
+      cancelAnimationFrame(animationFrameId);
+    };
   }, []);
 
   return (
@@ -99,12 +116,11 @@ export default function Contacto() {
         minHeight: "80vh", display: "flex", alignItems: "center",
         position: "relative", overflow: "hidden", paddingTop: "80px",
       }}>
-        <div className="contacto-hero-bg" style={{
+        <div ref={bgRef} className="contacto-hero-bg" style={{
           position: "absolute", inset: "-10%",
           backgroundImage: "url(https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/cebd91568_foto_1_pickup_guardia.jpg)",
           backgroundSize: "cover", backgroundPosition: "center",
           filter: "brightness(0.38) contrast(1.1)",
-          transform: `translate(${(mousePos.x - 0.5) * -15}px, ${(mousePos.y - 0.5) * -10}px)`,
           transition: "transform 0.8s ease-out",
         }} />
         <div style={{

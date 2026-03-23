@@ -44,7 +44,12 @@ function useScrollReveal() {
   useEffect(() => {
     const els = document.querySelectorAll(".reveal");
     const observer = new IntersectionObserver(
-      (entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("revealed"); }),
+      (entries, obs) => entries.forEach(e => { 
+        if (e.isIntersecting) {
+          e.target.classList.add("revealed");
+          obs.unobserve(e.target);
+        }
+      }),
       { threshold: 0, rootMargin: "100px" }
     );
     els.forEach(el => observer.observe(el));
@@ -80,7 +85,7 @@ const differentiators = [
 
 export default function Home() {
   useScrollReveal();
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const bgRef = useRef(null);
   const heroRef = useRef(null);
 
   useEffect(() => {
@@ -88,11 +93,24 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
+    let animationFrameId;
     const handleMouse = (e) => {
-      setMousePos({ x: e.clientX / window.innerWidth, y: e.clientY / window.innerHeight });
+      if (!bgRef.current) return;
+      const x = e.clientX / window.innerWidth;
+      const y = e.clientY / window.innerHeight;
+      
+      cancelAnimationFrame(animationFrameId);
+      animationFrameId = requestAnimationFrame(() => {
+        if (bgRef.current) {
+          bgRef.current.style.transform = `translate(${(x - 0.5) * -15}px, ${(y - 0.5) * -10}px)`;
+        }
+      });
     };
     window.addEventListener("mousemove", handleMouse);
-    return () => window.removeEventListener("mousemove", handleMouse);
+    return () => {
+      window.removeEventListener("mousemove", handleMouse);
+      cancelAnimationFrame(animationFrameId);
+    };
   }, []);
 
   return (
@@ -171,12 +189,11 @@ export default function Home() {
         position: "relative", overflow: "hidden", paddingTop: "80px",
       }}>
         {/* Background photo with parallax */}
-        <div style={{
+        <div ref={bgRef} style={{
           position: "absolute", inset: "-10%",
           backgroundImage: "url(https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=1920&q=90)",
           backgroundSize: "cover", backgroundPosition: "center",
           filter: "brightness(0.22) contrast(1.1)",
-          transform: `translate(${(mousePos.x - 0.5) * -15}px, ${(mousePos.y - 0.5) * -10}px)`,
           transition: "transform 0.8s ease-out",
         }} />
 

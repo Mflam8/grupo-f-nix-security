@@ -29,7 +29,12 @@ function useScrollReveal() {
   useEffect(() => {
     const els = document.querySelectorAll(".reveal");
     const observer = new IntersectionObserver(
-      (entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("revealed"); }),
+      (entries, obs) => entries.forEach(e => { 
+        if (e.isIntersecting) {
+          e.target.classList.add("revealed");
+          obs.unobserve(e.target);
+        }
+      }),
       { threshold: 0, rootMargin: "100px" }
     );
     els.forEach(el => observer.observe(el));
@@ -39,18 +44,30 @@ function useScrollReveal() {
 
 export default function Nosotros() {
   useScrollReveal();
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const bgRef = useRef(null);
 
   useEffect(() => {
     document.title = "Quiénes Somos | Grupo Fénix – Seguridad Integral";
   }, []);
 
   useEffect(() => {
+    let animationFrameId;
     const handleMouse = (e) => {
-      setMousePos({ x: e.clientX / window.innerWidth, y: e.clientY / window.innerHeight });
+      if (!bgRef.current) return;
+      const x = e.clientX / window.innerWidth;
+      const y = e.clientY / window.innerHeight;
+      cancelAnimationFrame(animationFrameId);
+      animationFrameId = requestAnimationFrame(() => {
+        if (bgRef.current) {
+          bgRef.current.style.transform = `translate(${(x - 0.5) * -15}px, ${(y - 0.5) * -10}px)`;
+        }
+      });
     };
     window.addEventListener("mousemove", handleMouse);
-    return () => window.removeEventListener("mousemove", handleMouse);
+    return () => {
+      window.removeEventListener("mousemove", handleMouse);
+      cancelAnimationFrame(animationFrameId);
+    };
   }, []);
 
   return (
@@ -91,12 +108,11 @@ export default function Nosotros() {
         minHeight: "80vh", display: "flex", alignItems: "center",
         position: "relative", overflow: "hidden", paddingTop: "80px",
       }}>
-        <div style={{
+        <div ref={bgRef} style={{
           position: "absolute", inset: "-10%",
           backgroundImage: "url(https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/5a580165f_WhatsAppImage2026-02-26at113000AM.jpg)",
           backgroundSize: "cover", backgroundPosition: "center top",
           filter: "brightness(0.38) contrast(1.1)",
-          transform: `translate(${(mousePos.x - 0.5) * -15}px, ${(mousePos.y - 0.5) * -10}px)`,
           transition: "transform 0.8s ease-out",
         }} />
         <div style={{
