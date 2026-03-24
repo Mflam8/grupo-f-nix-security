@@ -115,7 +115,7 @@ const services = [
     title: "Protección de Personas Importantes",
     subtitle: "Seguridad y escoltas para altos ejecutivos",
     desc: "Estrategias y agentes especializados destinados a salvaguardar la integridad física, psíquica y la libertad de personas de alto riesgo o relevancia pública. Abarca protección en movimientos a pie, vehiculares y eventos.",
-    img: "https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/446536a4f_WhatsAppImage2026-03-20at55322PM.jpg",
+    img: "https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/79ecdfc27_WhatsAppImage2026-03-24at24725PM.jpg",
     items: [
       "Protección de personas, escoltas VIP y Alta Seguridad.",
       "Seguridad de Eventos.",
