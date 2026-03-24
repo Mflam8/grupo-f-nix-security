@@ -135,7 +135,7 @@ const services = [
     title: "Agente de Seguridad Bouncer",
     subtitle: "Control de accesos y manejo de multitudes",
     desc: "Personal entrenado para la disuasión, verificación de identidad y mantenimiento del orden con un trato amable pero firme en bares y eventos.",
-    img: "https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/530cbdf1e_WhatsAppImage2026-03-20at55322PM2.jpg",
+    img: "https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/0d50eadad_WhatsAppImage2026-03-24at22913PM1.jpg",
     items: [
       "Verificación de identificaciones (IDs) y control de ingreso.",
       "Prevención de incidentes, riñas, tumultos y accesos no autorizados.",
