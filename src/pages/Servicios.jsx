@@ -27,7 +27,7 @@ const services = [
     title: "Seguridad Física de Instalaciones",
     subtitle: "Protección de personas, activos y propiedad privada",
     desc: "Personal de seguridad, barreras y vigilancia para disuadir, detectar y frenar intrusos, garantizando la continuidad operativa de su empresa.",
-    img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/060e40703_foto_2_guardia_carro.jpg",
+    img: "https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/ba243aab9_IMG_1111.png",
     items: [
       "Seguridad Comercial, Industrial, Bancaria y Residencial.",
       "Seguridad Perimetral, Interna y en Zonas Sensibles.",
