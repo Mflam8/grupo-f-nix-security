@@ -443,7 +443,7 @@ export default function Nosotros() {
                 aspectRatio: "1 / 1"
               }}>
                 <img 
-                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/a07163871_7.png" 
+                  src="https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/a8dd6faac_IMG_11081.png" 
                   alt="Valores Grupo Fénix" 
                   loading="lazy"
                   decoding="async"
