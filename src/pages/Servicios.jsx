@@ -304,27 +304,16 @@ export default function Servicios() {
           </p>
 
           <div className="servicios-cta-buttons flex flex-wrap gap-4" style={{ animation: "fadeUp 0.9s ease 0.6s both" }}>
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" style={{
+            <Link to={createPageUrl("Contacto")} style={{
               background: GOLD, color: "#000", fontWeight: "800",
-              padding: "16px 36px", borderRadius: "8px", fontSize: "1rem",
-              textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "8px",
+              padding: "16px 80px", borderRadius: "8px", fontSize: "1rem",
+              textDecoration: "none", display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "8px",
               boxShadow: "0 0 30px rgba(245,197,24,0.25)", transition: "all 0.3s",
             }}
               onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-3px)"; e.currentTarget.style.boxShadow = "0 16px 50px rgba(245,197,24,0.35)"; }}
               onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 0 30px rgba(245,197,24,0.25)"; }}
             >
               💬 Contáctanos
-            </a>
-            <Link to={createPageUrl("Contacto")} style={{
-              background: "transparent", color: "white", fontWeight: "700",
-              padding: "16px 36px", borderRadius: "8px", fontSize: "1rem",
-              textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "8px",
-              border: "2px solid rgba(255,255,255,0.2)", transition: "all 0.3s",
-            }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = GOLD; e.currentTarget.style.color = GOLD; }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.2)"; e.currentTarget.style.color = "white"; }}
-            >
-              Ver información de contacto <ChevronRight size={18} />
             </Link>
           </div>
 
@@ -495,29 +484,17 @@ export default function Servicios() {
             Uno de nuestros especialistas le ayudará a diseñar el plan de seguridad ideal para su empresa u organización.
           </p>
           <div className="servicios-cta-buttons flex flex-wrap gap-4 justify-center">
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" style={{
-              display: "inline-flex", alignItems: "center", gap: "10px",
-              background: "#25D366", color: "white", fontWeight: "700",
-              padding: "18px 44px", borderRadius: "10px", fontSize: "1.05rem",
-              textDecoration: "none", boxShadow: "0 8px 40px rgba(37,211,102,0.3)",
+            <Link to={createPageUrl("Contacto")} style={{
+              display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "10px",
+              background: GOLD, color: "#000", fontWeight: "700",
+              padding: "18px 80px", borderRadius: "10px", fontSize: "1.05rem",
+              textDecoration: "none", boxShadow: "0 8px 40px rgba(245,197,24,0.3)",
               transition: "all 0.3s",
             }}
-              onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-3px)"; e.currentTarget.style.boxShadow = "0 16px 50px rgba(37,211,102,0.45)"; }}
-              onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 8px 40px rgba(37,211,102,0.3)"; }}
+              onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-3px)"; e.currentTarget.style.boxShadow = "0 16px 50px rgba(245,197,24,0.45)"; }}
+              onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 8px 40px rgba(245,197,24,0.3)"; }}
             >
               <MessageCircle size={22} /> Contáctanos
-            </a>
-            <Link to={createPageUrl("Contacto")} style={{
-              display: "inline-flex", alignItems: "center", gap: "8px",
-              background: "transparent", color: "white", fontWeight: "700",
-              padding: "18px 44px", borderRadius: "10px", fontSize: "1.05rem",
-              textDecoration: "none", border: "2px solid rgba(255,255,255,0.2)",
-              transition: "all 0.3s",
-            }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = GOLD; e.currentTarget.style.color = GOLD; }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.2)"; e.currentTarget.style.color = "white"; }}
-            >
-              Ver información de contacto <ChevronRight size={18} />
             </Link>
           </div>
         </div>
