@@ -313,7 +313,7 @@ export default function Servicios() {
               onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-3px)"; e.currentTarget.style.boxShadow = "0 16px 50px rgba(245,197,24,0.35)"; }}
               onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 0 30px rgba(245,197,24,0.25)"; }}
             >
-              💬 Solicitar cotización
+              💬 Contáctanos
             </a>
             <Link to={createPageUrl("Contacto")} style={{
               background: "transparent", color: "white", fontWeight: "700",
@@ -505,7 +505,7 @@ export default function Servicios() {
               onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-3px)"; e.currentTarget.style.boxShadow = "0 16px 50px rgba(37,211,102,0.45)"; }}
               onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 8px 40px rgba(37,211,102,0.3)"; }}
             >
-              <MessageCircle size={22} /> Solicitar cotización
+              <MessageCircle size={22} /> Contáctanos
             </a>
             <Link to={createPageUrl("Contacto")} style={{
               display: "inline-flex", alignItems: "center", gap: "8px",
