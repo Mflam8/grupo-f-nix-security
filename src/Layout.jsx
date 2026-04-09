@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
-import { Menu, X, MessageCircle, ShieldCheck } from "lucide-react";
+import { Menu, X, MessageCircle, ShieldCheck, MapPin, Phone, Globe } from "lucide-react";
 
 const GOLD = "#F5C518";
 const WHATSAPP_URL =
@@ -204,10 +204,21 @@ export default function Layout({ children, currentPageName }) {
                 CONTACTO
               </div>
               <div style={{ color: "#666", fontSize: "0.875rem", lineHeight: "2.1" }}>
-                <div>📍 Pasaje Gedance, Casa #113</div>
-                <div style={{ paddingLeft: "1.3rem" }}>Col. Flor Blanca, San Salvador</div>
-                <div style={{ marginTop: "0.5rem" }}>📞 (503) 6116-5075</div>
-                <div>🌐 www.grupofenix.com.sv</div>
+                <div className="flex items-start gap-2 mt-1">
+                  <MapPin size={16} style={{ color: GOLD, marginTop: "4px", flexShrink: 0 }} />
+                  <div style={{ lineHeight: "1.6" }}>
+                    <div>Pasaje Gedance, Casa #113</div>
+                    <div>Col. Flor Blanca, San Salvador</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 mt-3">
+                  <Phone size={16} style={{ color: GOLD, flexShrink: 0 }} />
+                  <div>(503) 6116-5075</div>
+                </div>
+                <div className="flex items-center gap-2 mt-2">
+                  <Globe size={16} style={{ color: GOLD, flexShrink: 0 }} />
+                  <div>www.grupofenix.com.sv</div>
+                </div>
               </div>
             </div>
           </div>
