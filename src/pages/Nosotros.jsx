@@ -110,7 +110,7 @@ export default function Nosotros() {
       }}>
         <div ref={bgRef} style={{
           position: "absolute", inset: "-10%",
-          backgroundImage: "url(https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/5a580165f_WhatsAppImage2026-02-26at113000AM.jpg)",
+          backgroundImage: "url(https://wsrv.nl/?url=https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/5a580165f_WhatsAppImage2026-02-26at113000AM.jpg&w=1600&output=webp&q=70)",
           backgroundSize: "cover", backgroundPosition: "center top",
           filter: "brightness(0.38) contrast(1.1)",
           transition: "transform 0.8s ease-out",
@@ -443,7 +443,7 @@ export default function Nosotros() {
                 aspectRatio: "1 / 1"
               }}>
                 <img 
-                  src="https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/a8dd6faac_IMG_11081.png" 
+                  src="https://wsrv.nl/?url=https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/a8dd6faac_IMG_11081.png&w=800&output=webp&q=70" 
                   alt="Valores Grupo Fénix" 
                   loading="lazy"
                   decoding="async"
@@ -596,7 +596,7 @@ export default function Nosotros() {
       <section style={{ position: "relative", overflow: "hidden", padding: "8rem 0" }}>
         <div style={{
           position: "absolute", inset: 0,
-          backgroundImage: "url(https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1800&q=80)",
+          backgroundImage: "url(https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1800&q=60&auto=format,compress)",
           backgroundSize: "cover", backgroundPosition: "center",
           filter: "brightness(0.1)",
         }} />

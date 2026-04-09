@@ -196,7 +196,7 @@ export default function Home() {
         {/* Background photo with parallax */}
         <div ref={bgRef} style={{
           position: "absolute", inset: "-10%",
-          backgroundImage: "url(https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=1920&q=90)",
+          backgroundImage: "url(https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=1920&q=60&auto=format,compress)",
           backgroundSize: "cover", backgroundPosition: "center",
           filter: "brightness(0.22) contrast(1.1)",
           transition: "transform 0.8s ease-out",
@@ -326,7 +326,7 @@ export default function Home() {
                 boxShadow: "0 40px 100px rgba(0,0,0,0.6)",
               }}>
                 <img
-                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/304c8dc0b_1.png"
+                  src="https://wsrv.nl/?url=https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/304c8dc0b_1.png&w=1000&output=webp&q=70"
                   alt="Equipo Grupo Fénix"
                   loading="eager"
                   fetchpriority="high"
@@ -426,15 +426,15 @@ export default function Home() {
       <section style={{ padding: "0", background: "#000", overflow: "hidden" }}>
         <div className="marquee-track">
           {[
-            { img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/053d32d20_foto_2_guardia_carro.jpg", label: "Seguridad Física", icon: Shield },
-            { img: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&q=80", label: "Ciberseguridad", icon: Lock },
-            { img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/343f05c5d_ChatGPTImageFeb28202605_52_55PM.png", label: "Vigilancia CCTV", icon: Camera },
-            { img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/1f0636579_ChatGPTImageFeb28202606_31_05PM.png", label: "Investigaciones", icon: Search },
+            { img: "https://wsrv.nl/?url=https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/053d32d20_foto_2_guardia_carro.jpg&w=600&output=webp&q=70", label: "Seguridad Física", icon: Shield },
+            { img: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&q=60&auto=format,compress", label: "Ciberseguridad", icon: Lock },
+            { img: "https://wsrv.nl/?url=https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/343f05c5d_ChatGPTImageFeb28202605_52_55PM.png&w=600&output=webp&q=70", label: "Vigilancia CCTV", icon: Camera },
+            { img: "https://wsrv.nl/?url=https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/1f0636579_ChatGPTImageFeb28202606_31_05PM.png&w=600&output=webp&q=70", label: "Investigaciones", icon: Search },
             // Duplicados para animación infinita
-            { img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/053d32d20_foto_2_guardia_carro.jpg", label: "Seguridad Física", icon: Shield },
-            { img: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&q=80", label: "Ciberseguridad", icon: Lock },
-            { img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/343f05c5d_ChatGPTImageFeb28202605_52_55PM.png", label: "Vigilancia CCTV", icon: Camera },
-            { img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/1f0636579_ChatGPTImageFeb28202606_31_05PM.png", label: "Investigaciones", icon: Search },
+            { img: "https://wsrv.nl/?url=https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/053d32d20_foto_2_guardia_carro.jpg&w=600&output=webp&q=70", label: "Seguridad Física", icon: Shield },
+            { img: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=600&q=60&auto=format,compress", label: "Ciberseguridad", icon: Lock },
+            { img: "https://wsrv.nl/?url=https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/343f05c5d_ChatGPTImageFeb28202605_52_55PM.png&w=600&output=webp&q=70", label: "Vigilancia CCTV", icon: Camera },
+            { img: "https://wsrv.nl/?url=https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/1f0636579_ChatGPTImageFeb28202606_31_05PM.png&w=600&output=webp&q=70", label: "Investigaciones", icon: Search },
           ].map((item, i) => {
             const Icon = item.icon;
             return (
@@ -542,7 +542,7 @@ export default function Home() {
                 boxShadow: "0 40px 100px rgba(0,0,0,0.6)",
               }}>
                 <img
-                  src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/67592f8da_2.png"
+                  src="https://wsrv.nl/?url=https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/67592f8da_2.png&w=1000&output=webp&q=70"
                   alt="Seguridad que inspira confianza"
                   loading="lazy"
                   decoding="async"
@@ -676,7 +676,7 @@ export default function Home() {
         {/* Background photo */}
         <div style={{
           position: "absolute", inset: 0,
-          backgroundImage: "url(https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/bfacb66ff_6.png)",
+          backgroundImage: "url(https://wsrv.nl/?url=https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/bfacb66ff_6.png&w=1600&output=webp&q=70)",
           backgroundSize: "cover", backgroundPosition: "center",
           filter: "brightness(0.4)",
         }} />

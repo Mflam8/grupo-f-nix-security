@@ -122,7 +122,7 @@ export default function EquipmentAndUniform() {
                       position: "relative"
                     }}>
                       <img
-                        src="https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/27ccd740a_473F9191-80AA-4A4A-A875-CD4C1958BC7E.png"
+                        src="https://wsrv.nl/?url=https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/27ccd740a_473F9191-80AA-4A4A-A875-CD4C1958BC7E.png&w=800&output=webp&q=70"
                         alt="Armamento y Equipo"
                         loading="lazy"
                         decoding="async"
@@ -183,7 +183,7 @@ export default function EquipmentAndUniform() {
                       position: "relative"
                     }}>
                       <img
-                        src="https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/46533bdb5_161.png"
+                        src="https://wsrv.nl/?url=https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/46533bdb5_161.png&w=800&output=webp&q=70"
                         alt="Uniforme Oficial"
                         loading="lazy"
                         decoding="async"

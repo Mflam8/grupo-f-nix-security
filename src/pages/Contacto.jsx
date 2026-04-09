@@ -118,7 +118,7 @@ export default function Contacto() {
       }}>
         <div ref={bgRef} className="contacto-hero-bg" style={{
           position: "absolute", inset: "-10%",
-          backgroundImage: "url(https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/cebd91568_foto_1_pickup_guardia.jpg)",
+          backgroundImage: "url(https://wsrv.nl/?url=https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/cebd91568_foto_1_pickup_guardia.jpg&w=1600&output=webp&q=70)",
           backgroundSize: "cover", backgroundPosition: "center",
           filter: "brightness(0.38) contrast(1.1)",
           transition: "transform 0.8s ease-out",

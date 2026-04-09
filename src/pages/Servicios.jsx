@@ -13,7 +13,7 @@ const services = [
     title: "Asesoría y Asistencia Técnica en Seguridad",
     subtitle: "Consultoría estratégica e implementación",
     desc: "Brindamos soluciones consultivas especializadas para el diseño, implementación y mejora de sistemas de seguridad integral.",
-    img: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=700&q=80",
+    img: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=700&q=60&auto=format,compress",
     items: [
       "Análisis y Mitigación de Riesgos",
       "Evaluación, Diseño e Implementación de Sistemas de Seguridad",
@@ -27,7 +27,7 @@ const services = [
     title: "Seguridad Física de Instalaciones",
     subtitle: "Protección de personas, activos y propiedad privada",
     desc: "Personal de seguridad, barreras y vigilancia para disuadir, detectar y frenar intrusos, garantizando la continuidad operativa de su empresa.",
-    img: "https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/ba243aab9_IMG_1111.png",
+    img: "https://wsrv.nl/?url=https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/ba243aab9_IMG_1111.png&w=800&output=webp&q=70",
     items: [
       "Seguridad Comercial, Industrial, Bancaria y Residencial.",
       "Seguridad Perimetral, Interna y en Zonas Sensibles.",
@@ -42,7 +42,7 @@ const services = [
     title: "Seguridad Electrónica",
     subtitle: "Tecnología avanzada de vigilancia y monitoreo",
     desc: "Instalación, monitoreo y mantenimiento de sistemas electrónicos de seguridad para todo tipo de sector.",
-    img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/9d13f5d76_ChatGPTImageFeb28202605_52_55PM.png",
+    img: "https://wsrv.nl/?url=https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/9d13f5d76_ChatGPTImageFeb28202605_52_55PM.png&w=800&output=webp&q=70",
     items: [
       "Sistemas de Alarma contra robo, incendio y asalto",
       "CCTV – Circuito Cerrado de Televisión",
@@ -59,7 +59,7 @@ const services = [
     title: "Ciberseguridad",
     subtitle: "Protección digital y de activos de información",
     desc: "Protección integral de datos, redes, sistemas y aplicaciones contra amenazas y ataques maliciosos.",
-    img: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=700&q=80",
+    img: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=700&q=60&auto=format,compress",
     items: [
       "Pentesting y simulación de ciberataque",
       "Gestión de Vulnerabilidades",
@@ -77,7 +77,7 @@ const services = [
     title: "Investigaciones y Validación de Testimonio (VSA)",
     subtitle: "Inteligencia, análisis e investigaciones confidenciales",
     desc: "Recopilación, análisis y recomendaciones para la prevención y tratamiento de riesgos que afectan su empresa y entorno.",
-    img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=700&q=80",
+    img: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=700&q=60&auto=format,compress",
     items: [
       "Investigaciones empresariales (robos, hurtos, competencia desleal)",
       "Investigaciones laborales (fidelidad de empleados, conflicto de intereses)",
@@ -92,7 +92,7 @@ const services = [
     title: "Adiestramiento y Formación de Seguridad",
     subtitle: "Capacitación especializada y manejo de crisis",
     desc: "Programas de formación, consultoría y adiestramiento para personal de seguridad y empresas.",
-    img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/24e6a83fa_ChatGPTImageFeb28202605_45_37PM.png",
+    img: "https://wsrv.nl/?url=https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/24e6a83fa_ChatGPTImageFeb28202605_45_37PM.png&w=800&output=webp&q=70",
     items: [
       "Formación y Auditorías de Seguridad",
       "Capacitación y Adiestramiento especializado",
@@ -115,7 +115,7 @@ const services = [
     title: "Protección de Personas Importantes",
     subtitle: "Seguridad y escoltas para altos ejecutivos",
     desc: "Estrategias y agentes especializados destinados a salvaguardar la integridad física, psíquica y la libertad de personas de alto riesgo o relevancia pública. Abarca protección en movimientos a pie, vehiculares y eventos.",
-    img: "https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/79ecdfc27_WhatsAppImage2026-03-24at24725PM.jpg",
+    img: "https://wsrv.nl/?url=https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/79ecdfc27_WhatsAppImage2026-03-24at24725PM.jpg&w=800&output=webp&q=70",
     items: [
       "Protección de personas, escoltas VIP y Alta Seguridad.",
       "Seguridad de Eventos.",
@@ -135,7 +135,7 @@ const services = [
     title: "Agente de Seguridad Bouncer",
     subtitle: "Control de accesos y manejo de multitudes",
     desc: "Personal entrenado para la disuasión, verificación de identidad y mantenimiento del orden con un trato amable pero firme en bares y eventos.",
-    img: "https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/0d50eadad_WhatsAppImage2026-03-24at22913PM1.jpg",
+    img: "https://wsrv.nl/?url=https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/0d50eadad_WhatsAppImage2026-03-24at22913PM1.jpg&w=800&output=webp&q=70",
     items: [
       "Verificación de identificaciones (IDs) y control de ingreso.",
       "Prevención de incidentes, riñas, tumultos y accesos no autorizados.",
@@ -151,7 +151,7 @@ const services = [
     title: "Seguridad Logística y al Transporte",
     subtitle: "Prevención de robos y protección de mercadería en tránsito",
     desc: "Sistema integrado para proteger unidades de transporte, carga y tripulación desde el punto de salida hasta la llegada mediante tecnología y personal capacitado.",
-    img: "https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/e0efa0396_WhatsAppImage2026-03-20at55322PM1.jpg",
+    img: "https://wsrv.nl/?url=https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/e0efa0396_WhatsAppImage2026-03-20at55322PM1.jpg&w=800&output=webp&q=70",
     items: [
       "Custodio en Cabina: Vigilancia de carga, reportes y verificación de protocolos.",
       "Patrulla Armada para convoyes con capacidad de reacción rápida.",
@@ -245,7 +245,7 @@ export default function Servicios() {
       }}>
         <div ref={bgRef} style={{
           position: "absolute", inset: "-10%",
-          backgroundImage: "url(https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/59aef11fc_foto_3_equipo_camion.jpg)",
+          backgroundImage: "url(https://wsrv.nl/?url=https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/59aef11fc_foto_3_equipo_camion.jpg&w=1600&output=webp&q=70)",
           backgroundSize: "cover", backgroundPosition: "center",
           filter: "brightness(0.38) contrast(1.1)",
           transition: "transform 0.8s ease-out",
@@ -454,7 +454,7 @@ export default function Servicios() {
       <section style={{ position: "relative", overflow: "hidden", padding: "8rem 0" }}>
         <div style={{
           position: "absolute", inset: 0,
-          backgroundImage: "url(https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/59aef11fc_foto_3_equipo_camion.jpg)",
+          backgroundImage: "url(https://wsrv.nl/?url=https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/59aef11fc_foto_3_equipo_camion.jpg&w=1600&output=webp&q=70)",
           backgroundSize: "cover", backgroundPosition: "center",
           filter: "brightness(0.1)",
         }} />
