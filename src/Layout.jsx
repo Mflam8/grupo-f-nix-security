@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { Menu, X, MessageCircle, ShieldCheck, MapPin, Phone, Globe } from "lucide-react";
+import CookieConsent from "@/components/CookieConsent";
 
 const GOLD = "#F5C518";
 const WHATSAPP_URL =
@@ -268,6 +269,8 @@ export default function Layout({ children, currentPageName }) {
       >
         <MessageCircle style={{ color: "white", width: "30px", height: "30px" }} />
       </a>
+
+      <CookieConsent />
     </div>
   );
 }
