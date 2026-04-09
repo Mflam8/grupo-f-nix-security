@@ -337,7 +337,7 @@ export default function Home() {
                 {/* Bottom label */}
                 <div style={{ position: "absolute", bottom: "24px", left: "24px", right: "24px" }}>
                   <div style={{ color: GOLD, fontWeight: "700", fontSize: "0.8rem", letterSpacing: "2px", marginBottom: "4px" }}>EQUIPO DE ÉLITE</div>
-                  <div style={{ color: "#ccc", fontSize: "0.85rem" }}>Personal certificado ANSP · VSA · Evaluación psicológica</div>
+                  <div style={{ color: "#ccc", fontSize: "0.85rem" }}>Personal certificado ANSP · VSA · Evaluación Psicológica</div>
                 </div>
               </div>
 
