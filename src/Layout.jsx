@@ -64,7 +64,7 @@ export default function Layout({ children, currentPageName }) {
                   flexShrink: 0,
                 }}
               >
-                <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/3950a50a0_Diseosinttulo6.png" alt="Grupo Fénix Logo" fetchpriority="high" style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+                <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/3950a50a0_Diseosinttulo6.png" alt="Grupo Fénix Logo" width="45" height="45" fetchpriority="high" style={{ width: "100%", height: "100%", objectFit: "contain" }} />
               </div>
               <div>
                 <div style={{ color: GOLD, fontWeight: "900", fontSize: "1.05rem", letterSpacing: "2px", lineHeight: "1.1" }}>
@@ -97,6 +97,7 @@ export default function Layout({ children, currentPageName }) {
 
             {/* Mobile Burger */}
             <button
+              aria-label="Abrir menú móvil"
               className="md:hidden p-2"
               onClick={() => setMobileOpen(true)}
               style={{ color: GOLD, background: "none", border: "none", cursor: "pointer" }}
@@ -126,7 +127,7 @@ export default function Layout({ children, currentPageName }) {
             <X size={32} />
           </button>
           <div className="flex flex-col items-center gap-3">
-            <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/3950a50a0_Diseosinttulo6.png" alt="Grupo Fénix Logo" style={{ width: "70px", height: "70px", objectFit: "contain" }} />
+            <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/3950a50a0_Diseosinttulo6.png" alt="Grupo Fénix Logo" width="70" height="70" style={{ width: "70px", height: "70px", objectFit: "contain" }} />
             <div style={{ color: GOLD, fontWeight: "900", fontSize: "1.4rem", letterSpacing: "3px" }}>
               GRUPO FÉNIX
             </div>
@@ -162,15 +163,15 @@ export default function Layout({ children, currentPageName }) {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
             <div>
               <div className="flex items-center gap-3 mb-2">
-                <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/3950a50a0_Diseosinttulo6.png" alt="Logo" style={{ width: "36px", height: "36px", objectFit: "contain" }} />
+                <img src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/3950a50a0_Diseosinttulo6.png" alt="Logo" width="36" height="36" style={{ width: "36px", height: "36px", objectFit: "contain" }} />
                 <div style={{ color: GOLD, fontWeight: "900", fontSize: "1.3rem", letterSpacing: "3px" }}>
                   GRUPO FÉNIX
                 </div>
               </div>
-              <div style={{ color: "#555", fontSize: "0.78rem", marginBottom: "1.25rem" }}>
+              <div style={{ color: "#999", fontSize: "0.78rem", marginBottom: "1.25rem" }}>
                 Phoenix Security S.A. de C.V.
               </div>
-              <p style={{ color: "#666", fontSize: "0.85rem", lineHeight: "1.8" }}>
+              <p style={{ color: "#aaa", fontSize: "0.85rem", lineHeight: "1.8" }}>
                 Seguridad que evoluciona.<br />
                 Protección que inspira confianza.
               </p>
@@ -191,7 +192,7 @@ export default function Layout({ children, currentPageName }) {
                     key={link.page}
                     to={createPageUrl(link.page)}
                     className="footer-link"
-                    style={{ color: "#666", textDecoration: "none", fontSize: "0.875rem" }}
+                    style={{ color: "#aaa", textDecoration: "none", fontSize: "0.875rem" }}
                   >
                     {link.name}
                   </Link>
@@ -203,7 +204,7 @@ export default function Layout({ children, currentPageName }) {
               <div style={{ color: GOLD, fontWeight: "700", fontSize: "0.8rem", letterSpacing: "2px", marginBottom: "1.5rem" }}>
                 CONTACTO
               </div>
-              <div style={{ color: "#666", fontSize: "0.875rem", lineHeight: "2.1" }}>
+              <div style={{ color: "#aaa", fontSize: "0.875rem", lineHeight: "2.1" }}>
                 <div className="flex items-start gap-2 mt-1">
                   <MapPin size={16} style={{ color: GOLD, marginTop: "4px", flexShrink: 0 }} />
                   <div style={{ lineHeight: "1.6" }}>
@@ -227,10 +228,10 @@ export default function Layout({ children, currentPageName }) {
             style={{ borderTop: "1px solid #141414", paddingTop: "1.5rem" }}
             className="flex flex-col md:flex-row items-center justify-between gap-3"
           >
-            <div style={{ color: "#444", fontSize: "0.78rem" }}>
+            <div style={{ color: "#888", fontSize: "0.78rem" }}>
               © 2024 Grupo Fénix. Todos los derechos reservados.
             </div>
-            <div className="flex flex-wrap gap-4 justify-center" style={{ color: "#444", fontSize: "0.78rem" }}>
+            <div className="flex flex-wrap gap-4 justify-center" style={{ color: "#888", fontSize: "0.78rem" }}>
               <span>Autorización PNC #406</span>
               <span>·</span>
               <span>NIT: 0614-140319-102-1</span>

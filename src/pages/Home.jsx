@@ -309,7 +309,7 @@ export default function Home() {
                     background: "white", borderRadius: "8px", padding: "6px 12px",
                     height: "46px", minWidth: "80px"
                   }}>
-                    <img src={logo.img} alt={logo.alt} style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} />
+                    <img src={logo.img} alt={logo.alt} width="80" height="46" style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} />
                   </div>
                 ))}
               </div>
@@ -328,6 +328,8 @@ export default function Home() {
                 <img
                   src="https://wsrv.nl/?url=https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/304c8dc0b_1.png&w=1000&output=webp&q=70"
                   alt="Equipo Grupo Fénix"
+                  width="1000"
+                  height="1000"
                   loading="eager"
                   fetchpriority="high"
                   decoding="async"
@@ -629,7 +631,7 @@ export default function Home() {
       ══════════════════════════════════════════ */}
       <section style={{ padding: "4rem 0", background: "#000", borderTop: "1px solid #0e0e0e" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div style={{ color: "#333", fontSize: "0.72rem", letterSpacing: "3px", textAlign: "center", marginBottom: "2.5rem" }}>
+          <div style={{ color: "#999", fontSize: "0.72rem", letterSpacing: "3px", textAlign: "center", marginBottom: "2.5rem" }}>
             MEMBRESÍAS · CERTIFICACIONES · SEGUROS
           </div>
           <div className="memberships-row flex flex-wrap justify-center items-center gap-6">
@@ -645,7 +647,7 @@ export default function Home() {
               onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.borderColor = "rgba(245,197,24,0.3)"; }}
             >
               <div style={{ color: GOLD, fontWeight: "900", fontSize: "1.1rem" }}>PNC #406</div>
-              <div style={{ color: "#888", fontSize: "0.6rem", marginTop: "4px", letterSpacing: "1px" }}>AUTORIZACIÓN</div>
+              <div style={{ color: "#aaa", fontSize: "0.6rem", marginTop: "4px", letterSpacing: "1px" }}>AUTORIZACIÓN</div>
             </div>
             {[
               { img: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/b467792dd_8.png", alt: "BASC" },
