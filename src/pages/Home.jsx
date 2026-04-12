@@ -250,11 +250,11 @@ export default function Home() {
                 lineHeight: "1.05", marginBottom: "1.75rem", color: "white",
                 animation: "fadeUp 0.9s ease 0.2s both",
               }}>
-                Seguridad<br />
-                que <span style={{
+                Seguridad que evoluciona,<br />
+                protección que <span style={{
                   color: GOLD,
                   textShadow: "0 0 40px rgba(245,197,24,0.4)",
-                }}>evoluciona…</span>
+                }}>inspira confianza...</span>
               </h1>
 
               <p style={{
