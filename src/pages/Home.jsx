@@ -280,7 +280,7 @@ export default function Home() {
                   textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "8px",
                   border: "2px solid rgba(255,255,255,0.2)",
                 }}>
-                  💬 Solicitar cotización
+                  💬 Contáctanos
                 </a>
               </div>
 
