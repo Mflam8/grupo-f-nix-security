@@ -85,4 +85,13 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  p, 
+  .diff-cards-grid > div > div:last-child, 
+  .valor-card > div:last-child,
+  .contact-card > div:not(:first-child):not(:nth-child(2)),
+  .checklist-item span,
+  .item-pill span {
+    text-align: justify !important;
+  }
 }
