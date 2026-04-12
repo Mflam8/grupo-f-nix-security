@@ -544,7 +544,7 @@ export default function Home() {
                 boxShadow: "0 40px 100px rgba(0,0,0,0.6)",
               }}>
                 <img
-                  src="https://wsrv.nl/?url=https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/699dc69700a4d30f0cc60f12/67592f8da_2.png&w=1000&output=webp&q=70"
+                  src="https://wsrv.nl/?url=https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/717541df9_F9.png&w=1000&output=webp&q=70"
                   alt="Seguridad que inspira confianza"
                   loading="lazy"
                   decoding="async"
