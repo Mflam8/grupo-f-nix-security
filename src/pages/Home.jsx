@@ -664,7 +664,7 @@ export default function Home() {
                 onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.boxShadow = "0 8px 25px rgba(255,255,255,0.15)"; }}
                 onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 4px 20px rgba(0,0,0,0.5)"; }}
               >
-                <img src={logo.img} alt={logo.alt} style={{ maxWidth: "100px", maxHeight: "100%", objectFit: "contain" }} />
+                <img src={logo.img} alt={logo.alt} style={{ width: "100%", height: "100%", objectFit: "contain", maxWidth: "110px" }} />
               </div>
             ))}
           </div>
