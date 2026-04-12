@@ -103,6 +103,7 @@ const services = [
       "Seguridad de puertos, aeropuertos y transportes",
       "Análisis estratégico de pre-empleo",
       "Adiestramiento en Uso de Armas No Letales",
+      "Adiestramiento en polígono de tiro",
       "Capacitación de Servicio al Cliente y Normas de Cortesía",
       "Capacitación de Trabajo en Equipo y Taller de Cuerdas",
       "Charlas Inclusión Social y Acoso Laboral y Sexual",
