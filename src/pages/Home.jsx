@@ -246,7 +246,7 @@ export default function Home() {
               </div>
 
               <h1 className="hero-title" style={{
-                fontSize: "clamp(2.8rem, 6.5vw, 5.5rem)", fontWeight: "900",
+                fontSize: "clamp(2.2rem, 4.5vw, 3.8rem)", fontWeight: "900",
                 lineHeight: "1.05", marginBottom: "1.75rem", color: "white",
                 animation: "fadeUp 0.9s ease 0.2s both",
               }}>
