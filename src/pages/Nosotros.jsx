@@ -443,7 +443,7 @@ export default function Nosotros() {
                 aspectRatio: "1 / 1"
               }}>
                 <img 
-                  src="https://wsrv.nl/?url=https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/a8dd6faac_IMG_11081.png&w=800&output=webp&q=70" 
+                  src="https://wsrv.nl/?url=https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/f790e3ec1_F13.png&w=800&output=webp&q=70" 
                   alt="Valores Grupo Fénix" 
                   loading="lazy"
                   decoding="async"
