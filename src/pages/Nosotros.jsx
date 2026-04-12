@@ -180,7 +180,7 @@ export default function Nosotros() {
             >
               Ver nuestros servicios <ChevronRight size={18} />
             </Link>
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" style={{
+            <Link to={createPageUrl("Contacto")} style={{
               background: "transparent", color: "white", fontWeight: "700",
               padding: "16px 36px", borderRadius: "8px", fontSize: "1rem",
               textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "8px",
@@ -189,8 +189,8 @@ export default function Nosotros() {
               onMouseEnter={e => { e.currentTarget.style.borderColor = GOLD; e.currentTarget.style.color = GOLD; }}
               onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.2)"; e.currentTarget.style.color = "white"; }}
             >
-              💬 Solicitar cotización
-            </a>
+              💬 Contáctanos
+            </Link>
           </div>
 
           {/* Trust badges */}
