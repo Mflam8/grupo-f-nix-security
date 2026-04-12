@@ -548,7 +548,7 @@ export default function Home() {
                   alt="Seguridad que inspira confianza"
                   loading="lazy"
                   decoding="async"
-                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", filter: "brightness(0.9)" }}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "65% 70%", filter: "brightness(0.9)" }}
                 />
                 <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.3) 0%, transparent 50%)" }} />
               </div>
