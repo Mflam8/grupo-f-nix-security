@@ -578,9 +578,14 @@ export default function Nosotros() {
             <h3 style={{ color: "white", fontSize: "1.8rem", fontWeight: "800", marginBottom: "1rem" }}>
               Nuestro <span style={{ color: GOLD }}>Compromiso Ético</span>
             </h3>
-            <p style={{ color: "#888", lineHeight: "1.85", marginBottom: "2rem", fontSize: "1rem", maxWidth: "800px", margin: "0 auto 2rem" }}>
+            <p style={{ color: "#888", lineHeight: "1.85", marginBottom: "1.5rem", fontSize: "1rem", maxWidth: "800px", margin: "0 auto 1.5rem" }}>
               Nos comprometemos a proporcionar servicios de seguridad de alta calidad, respetando la ley y los derechos humanos. Actuamos con integridad, honradez y confidencialidad, y mantenemos una política estricta contra actividades ilícitas, corrupción y conflictos de interés.
             </p>
+            <div style={{ color: "#ccc", fontSize: "0.95rem", marginBottom: "2.5rem", lineHeight: "1.8" }}>
+              Para consultas o reportes sobre nuestro código de ética:<br />
+              <span style={{ color: GOLD, fontWeight: "600" }}>Escríbenos a:</span> <a href="mailto:Etica@grupofenixsv.com" style={{ color: "white", textDecoration: "none", fontWeight: "500" }}>Etica@grupofenixsv.com</a><br />
+              <span style={{ color: GOLD, fontWeight: "600" }}>Teléfono:</span> <a href="tel:+50361486249" style={{ color: "white", textDecoration: "none", fontWeight: "500" }}>(503) 6148-6249</a>
+            </div>
             <a href="https://media.base44.com/files/public/699dc69700a4d30f0cc60f12/0d70c0c3f_CODIGODEETICAPhoenixSecuritySAdeCV1.docx" download target="_blank" rel="noopener noreferrer" className="btn-secondary" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
               📄 Descargar Código de Ética
             </a>
