@@ -586,8 +586,8 @@ export default function Nosotros() {
               <span style={{ color: GOLD, fontWeight: "600" }}>Escríbenos a:</span> <a href="mailto:Etica@grupofenixsv.com" style={{ color: "white", textDecoration: "none", fontWeight: "500" }}>Etica@grupofenixsv.com</a><br />
               <span style={{ color: GOLD, fontWeight: "600" }}>Teléfono:</span> <a href="tel:+50361486249" style={{ color: "white", textDecoration: "none", fontWeight: "500" }}>(503) 6148-6249</a>
             </div>
-            <a href="https://media.base44.com/files/public/699dc69700a4d30f0cc60f12/0d70c0c3f_CODIGODEETICAPhoenixSecuritySAdeCV1.docx" download target="_blank" rel="noopener noreferrer" className="btn-secondary" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
-              📄 Descargar Código de Ética
+            <a href="https://media.base44.com/images/public/699dc69700a4d30f0cc60f12/f35f90d22_IMG_18371.png" target="_blank" rel="noopener noreferrer" className="btn-secondary" style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
+              👁️ Ver Código de Ética
             </a>
           </div>
         </div>
