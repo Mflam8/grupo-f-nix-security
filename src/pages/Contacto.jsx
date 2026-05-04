@@ -21,7 +21,7 @@ const contactCards = [
   },
   {
     icon: Clock, title: "Disponibilidad",
-    lines: ["Centro de Operaciones: 24/7", "Atención a consultas: Lun – Vie"],
+    lines: ["Centro de Operaciones: 24/7", "Atención a consultas: Lun – Dom (365 días)"],
   },
   {
     icon: Shield, title: "Operación Legal",
