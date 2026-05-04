@@ -543,7 +543,7 @@ export default function Nosotros() {
               </p>
               <div className="flex flex-col gap-3">
                 {[
-                  "Centro de Operaciones y Servicios (COS) activo 24/7",
+                  "Centro de Operaciones y Servicios (COS) activo 24/7. Atención a consultas Lunes a Domingo 365 días del año",
                   "Coordinaciones pre-establecidas con PNC y Fiscalía General",
                   "Equipos de reacción en todo el territorio nacional",
                   "Apoyo en puntos vulnerables con recursos propios y PNC",
