@@ -357,15 +357,20 @@ export default function Home() {
 
               {/* Floating badge — COS */}
               <div style={{
-                position: "absolute", top: "30px", right: "-24px",
+                position: "absolute", top: "20px", right: "-30px",
                 background: "linear-gradient(135deg, #111, #0a0700)",
                 border: "1px solid rgba(245,197,24,0.3)", borderRadius: "12px",
-                padding: "14px 20px", boxShadow: "0 8px 30px rgba(0,0,0,0.6)",
+                padding: "14px 18px", boxShadow: "0 8px 30px rgba(0,0,0,0.6)",
                 animation: "float 4s ease-in-out 1s infinite",
                 textAlign: "center",
+                maxWidth: "200px",
+                zIndex: 2,
               }}>
-                <div style={{ color: GOLD, fontWeight: "900", fontSize: "1.4rem" }}>24/7</div>
-                <div style={{ color: "#666", fontSize: "0.62rem", letterSpacing: "1px" }}>CENTRO DE OPS</div>
+                <div style={{ color: GOLD, fontWeight: "900", fontSize: "1.4rem", lineHeight: "1" }}>24/7</div>
+                <div style={{ color: "#ddd", fontSize: "0.65rem", letterSpacing: "1px", marginTop: "6px", fontWeight: "700" }}>CENTRO DE OPS</div>
+                <div style={{ color: "#888", fontSize: "0.55rem", letterSpacing: "0.5px", marginTop: "4px", lineHeight: "1.4" }}>
+                  ATENCIÓN A CONSULTAS LUNES A DOMINGO 365 DÍAS DEL AÑO
+                </div>
               </div>
 
               {/* Floating badge — Coverage */}
