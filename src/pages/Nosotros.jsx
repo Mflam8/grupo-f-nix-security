@@ -262,7 +262,7 @@ export default function Nosotros() {
                 <p key={i} style={{ color: "#aaa", lineHeight: "1.85", fontSize: "0.95rem", marginBottom: "1.25rem" }}>{text}</p>
               ))}
               <div className="flex flex-col gap-3 mt-6">
-                {["Personal certificado ANSP con evaluación psicológica y VSA", "COS activo 24/7 con protocolos de reacción inmediata", "Cobertura y supervisión a nivel nacional"].map((item, i) => (
+                {["Personal certificado ANSP con evaluación psicológica y VSA", "COS activo 24/7. Atención a consultas Lunes a Domingo 365 días del año", "Cobertura y supervisión a nivel nacional"].map((item, i) => (
                   <div key={i} className="checklist-item" style={{
                     display: "flex", alignItems: "flex-start", gap: "12px",
                     padding: "12px 16px", background: "rgba(245,197,24,0.03)", borderRadius: "8px",
@@ -297,7 +297,7 @@ export default function Nosotros() {
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
                 {[
                   { value: "406", label: "Licencia PNC" },
-                  { value: "24/7", label: "COS Activo" },
+                  { value: "24/7", label: "Centro de OPS. Atención L-D 365 días" },
                   { value: "3+", label: "Membresías" },
                   { value: "100%", label: "Certificados" },
                 ].map((s, i) => (
