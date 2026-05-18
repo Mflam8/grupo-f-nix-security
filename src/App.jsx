@@ -65,13 +65,15 @@ const AuthenticatedApp = () => {
 
 function App() {
   return (
-    <div style={{ height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: '#000', color: '#F5C518', fontFamily: 'sans-serif', textAlign: 'center', padding: '2rem' }}>
-      <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem', fontWeight: 'bold' }}>Sitio Suspendido</h1>
-      <p style={{ color: '#aaa', fontSize: '1.2rem', maxWidth: '600px' }}>
-        Este sitio web se encuentra temporalmente fuera de servicio. Por favor, contacte a su desarrollador.
-      </p>
-    </div>
-  );
+    <AuthProvider>
+      <QueryClientProvider client={queryClientInstance}>
+        <Router>
+          <AuthenticatedApp />
+        </Router>
+        <Toaster />
+      </QueryClientProvider>
+    </AuthProvider>
+  )
 }
 
 export default App
