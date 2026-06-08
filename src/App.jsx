@@ -17,13 +17,20 @@ const LayoutWrapper = ({ children, currentPageName }) => Layout ?
 
 const AuthenticatedApp = () => {
   return (
-    <div className="fixed inset-0 flex items-center justify-center" style={{ background: '#000', color: 'white' }}>
-      <div className="text-center">
-        <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '1rem' }}>Sitio Suspendido</h1>
-        <p style={{ fontSize: '1rem', color: '#999', marginBottom: '1.5rem' }}>El sitio está temporalmente fuera de servicio.</p>
-        <p style={{ fontSize: '0.9rem', color: '#666' }}>Por favor contacte a su desarrollador.</p>
-      </div>
-    </div>
+    <Routes>
+      {Object.entries(Pages).map(([pageName, PageComponent]) => (
+        <Route
+          key={pageName}
+          path={`/${pageName}`}
+          element={<LayoutWrapper currentPageName={pageName}><PageComponent /></LayoutWrapper>}
+        />
+      ))}
+      <Route
+        path="/"
+        element={<LayoutWrapper currentPageName={mainPageKey}><MainPage /></LayoutWrapper>}
+      />
+      <Route path="*" element={<PageNotFound />} />
+    </Routes>
   );
 };
 
